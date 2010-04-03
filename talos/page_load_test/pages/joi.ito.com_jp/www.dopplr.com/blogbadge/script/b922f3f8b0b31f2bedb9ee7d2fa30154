@@ -1,0 +1,45 @@
+
+/* Comments for people reading the source of this script (hi!)
+
+* The <script> tag can happily be placed in the <head> of your
+  blog if you like that kind of thing. Just put the
+  <div id="dopplr-blog-badge"></div> where you want the badge.
+
+* Any existing contents of the div will be replaced when the script
+  runs, so you can put a placeholder graphic while it loads. If you
+  have the badge displaying only to people with dopplr cookies, the
+  inside of the <div> will never be replaced.
+
+*/
+
+// Run this once the DOM is loaded.
+// ( from http://www.kryogenix.org/days/2007/09/26/shortloaded )
+(function(i) {u = navigator.userAgent; e = /*@cc_on!@*/false; st = setTimeout;
+if(/webkit/i.test(u)){st(function(){dr = document.readyState;if(dr=="loaded"||
+dr=="complete"){i();}else{st(arguments.callee,10);}},10);}else if((/mozilla/i.
+test(u)&&!/(compati)/.test(u))||(/opera/i.test(u))){document.addEventListener(
+"DOMContentLoaded",i,false);} else if(e){(function(){t=document.createElement(
+'doc:ready');try{t.doScroll('left');i();t= null;}catch(e){st(arguments.callee,
+0);}})();}else{window.onload = i;}})(function() {
+
+  // Stylesheet loaded into HEAD tag directly, but in-line it to avoid
+  // making another HTTP request.
+  var s=document.createElement('style');
+  document.getElementsByTagName('head')[0].appendChild(s);
+
+  var css = "#dopplr-blog-badge {\n    }\n.dopplr-badge {\n    font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;\n    color: #333;\n    background: #fff;\n    border: 1px solid #999;\n    padding: 5px;\n    max-width: 250px;\n    width: expression(Math.min(parseInt(this.offsetWidth), 250 ) + \"px\");\n    }\n#dopplr-logo {\n    margin: 0 0 .5em 0;\n    }\n#dopplr-logo-img {\n    width: 100%;\n    max-width: 180px;\n    width: expression(Math.min(parseInt(this.offsetWidth), 180 ) + \"px\");\n    border: 0;\n    }\n.dopplr-badge a:link,\n.dopplr-badge a:visited,\n.dopplr-badge a:active {\n    color:#6699CC;\n    text-decoration:none;\n    }\n.dopplr-badge a:hover {\n    background:#def;\n    color:#47a;\n    }\n.dopplr-badge #dopplr-logo a:hover {\n    background:#fff;\n}\n.dopplr-badge a:visited {\n    color:#6699CC;\n    }\n.dopplr-badge p {\n    font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;\n    margin: 0; padding: 0;\n    font-size: 9pt;\n    }\n.dopplr-badge .d-status {\n    }\n.dopplr-badge .trips {\n    list-style-type: circle;\n    margin: .6em 0 1em 1em;\n    padding: 0;\n    font-size: 9pt;\n    }\n    .dopplr-badge .trips li {\n        margin: 0 0 5px 0;\n        line-height: 100%\n        }\n.dopplr-badge .trips .tripmonth {\n    font-size: .98em;\n    color: #4d4d4d;\n    }\n.dopplr-badge abbr {\n\t\/* I'd just like to say - huh? Default styling of a _border_? On a _SPAN_? To fake an *UNDERLINE*? *\/\n\tborder-bottom: none;\n}\n#dopplr-join {\n    text-align: right;\n    margin: 0 10px 4px 0;\n    font-size: 9pt;\n    }\n    #dopplr-join a {\n        font-size: .98em;\n        }\n";
+
+  if(!!window.ActiveXObject) { // ie.
+      document.styleSheets[document.styleSheets.length-1].cssText = css;
+  } else {
+      stylenode = document.createTextNode(css);
+      s.appendChild(stylenode);
+  }
+
+  badge = document.getElementById('dopplr-blog-badge');
+  if (badge) badge.innerHTML = "<div class=\"dopplr-badge\">\n    <div id=\"dopplr-logo\">\n        <a href=\"http:\/\/www.dopplr.com\/traveller\/Joi\"><img id=\"dopplr-logo-img\" src=\"http:\/\/www.dopplr.com\/traveller\/Joi\/badge?no_whitespace=1\"\/><\/a>\n    <\/div>\n    <p class=\"d-status\">\n    <a href=\"http:\/\/www.dopplr.com\/traveller\/Joi\">Joi<\/a> is at home in Tokyo\n          \n            and has planned trips to:\n          \n        \n    <\/p>\n    \n    <ul class=\"trips\">\n        \n        <li><a href=\"http:\/\/www.dopplr.com\/trip\/Joi\/56371\">San Juan Municipio<\/a>\n          \n            <span class=\"tripmonth\">from <span class=\"name-date\"><abbr class=\"dtstart\" title=\"20080221\">February&nbsp;21st<\/abbr><\/span> to&nbsp;<span class=\"name-date\"><abbr class=\"dtend\" title=\"20080224\">24th<\/abbr><\/span>\n          \n        <\/span><\/li>\n        \n        <li><a href=\"http:\/\/www.dopplr.com\/trip\/Joi\/24725\">San Francisco<\/a>\n          \n            <span class=\"tripmonth\">from <span class=\"name-date\"><abbr class=\"dtstart\" title=\"20080306\">March&nbsp;6th<\/abbr><\/span> to&nbsp;<span class=\"name-date\"><abbr class=\"dtend\" title=\"20080310\">10th<\/abbr><\/span>\n          \n        <\/span><\/li>\n        \n        <li><a href=\"http:\/\/www.dopplr.com\/trip\/Joi\/94256\">Sapporo<\/a>\n          \n            <span class=\"tripmonth\">from <span class=\"name-date\"><abbr class=\"dtstart\" title=\"20080313\">March&nbsp;13th<\/abbr><\/span> to&nbsp;<span class=\"name-date\"><abbr class=\"dtend\" title=\"20080314\">14th<\/abbr><\/span>\n          \n        <\/span><\/li>\n        \n        <li><a href=\"http:\/\/www.dopplr.com\/trip\/Joi\/86206\">Milan<\/a>\n          \n            <span class=\"tripmonth\">from <span class=\"name-date\"><abbr class=\"dtstart\" title=\"20080326\">March&nbsp;26th<\/abbr><\/span> to&nbsp;<span class=\"name-date\"><abbr class=\"dtend\" title=\"20080330\">30th<\/abbr><\/span>\n          \n        <\/span><\/li>\n        \n    <\/ul>\n    \n<!--\n    \n-->\n<\/div>\n";
+
+});
+
+
+

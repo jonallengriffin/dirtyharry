@@ -1,0 +1,80 @@
+body {
+background-image: url(../images.wikia.com/marveldatabase/images/2/25/Marvel_background.jpg);
+background-repeat: repeat-x;
+background-color: #c20007;
+}
+table#navLinksWikia a {
+color: #FFF;
+background-image: url(../images.wikia.com/marveldatabase/images/9/9a/Bullets.gif);
+background-position: 0px 1px;
+padding-left: 13px;
+}
+.articleBar, .articleBar div {
+background-image: url(../images.wikia.com/marveldatabase/images/4/48/Article_bars_old.gif);
+}
+div.gelButton, div.gelButton a {
+background-image: url(../images.wikia.com/marveldatabase/images/7/79/Gel_buttons.gif);
+}
+#header, #wikia, #wikia-inside {
+background-image: url(../images.wikia.com/marveldatabase/images/9/9b/Marvel_header_bg.gif);
+}
+#search div {
+background-image: url(../images.wikia.com/marveldatabase/images/e/e1/Search.gif);
+}
+#search input {
+border-color: #C20007;
+}
+ul#welcome li.user {
+color: #00C;
+background-image: url(../images.wikia.com/marveldatabase/images/0/05/User_menu.gif);
+}
+#wikiaLogo {
+background-image: url(../images.wikia.com/marveldatabase/images/6/6a/Wikia_logo.gif);
+}
+table#wikiafooter, table#wikiafooter td a {
+color: #FFF;
+}
+a#wikiaFooterLogo {
+background-image: url(../images.wikia.com/marveldatabase/images/0/00/Wikia_logo_small.gif);
+}
+li.widget, #spotlights {
+background-color: #850000;
+}
+li.widget a, li.widget a:visited, .boxLinkSmall a:link, .boxLinkSmall a:hover, .boxLinkSmall a:visited {
+color: #FFF;
+}
+li.widget h1, li.widget h2 {
+color: #FFF;
+font-family: "Comic Sans MS", arial, helvetica, sans-serif !important;
+}
+
+.roundedDiv div.r_boxContent, .roundedDiv b.xb2, .roundedDiv b.xb3, .roundedDiv b.xb4, #userMenu{
+background-color: #850000;
+}
+#userMenu a {
+color: #FFF !important;
+}
+#userMenu a:hover {
+color: #FFF;
+background-color: #c20007;
+}
+.boxHeader, .widgetWikiaToolbox .listHdr {
+font-family: "Comic Sans MS", arial, helvetica, sans-serif !important;
+color: #FFF !important;
+}
+#header {
+color: #000;
+}
+#header a {
+color: #00F;
+}
+#gelButtons a {
+color: #FFF;
+}
+
+/* fixes widgets */
+.widgetContent h5,
+.widgetContent,
+.widgetContent ul li {
+color: #fff;
+}

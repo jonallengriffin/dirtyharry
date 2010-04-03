@@ -1,0 +1,213 @@
+body {
+	background: url(../images.wikia.com/uglybetty/images/d/dc/White.gif) repeat-x;
+	background-color: #FFFFFF;
+}
+
+#header, ul#wikia, ul#wikia li {
+	background-image: url(../images.wikia.com/uglybetty/images/8/81/Header_bg2.gif);
+}
+#header, #header a {
+	color: #000;
+}
+#header a:hover {
+	color: #333;
+}
+
+
+
+/*** User area ***/
+ul#welcome li.user {
+	background-image: url(../images.wikia.com/uglybetty/images/0/05/User_menu.gif);
+	color: #36C;
+}
+#userMenu {
+	background: #F5F5F5;
+	border-color: #36C;
+}
+#userMenu a {
+	color: #000;
+}
+#userMenu a:hover {
+	background: #36C;
+	color: #FFF;
+}
+
+/*** Wikia box ***/
+#wikiaLogo {
+	background: url(../images.wikia.com/uglybetty/images/5/55/Wikialogo.gif) no-repeat; background-color: #F5F5F5; 
+}
+#search input {
+	border-color: #36C;
+}
+#search div {
+	background: url(../images.wikia.com/common/skins/quartz/sapphire/images/search.gif) no-repeat;
+}
+div.gelButton {
+	background: url(../images.wikia.com/uglybetty/images/7/79/Gel_buttons.gif) top left no-repeat;
+}
+div.gelButton a {
+	background: url(../images.wikia.com/uglybetty/images/7/79/Gel_buttons.gif) top right no-repeat;
+	color: #FFF;
+}
+
+/*** Nav Links ***/
+table#navLinksWikia a {
+	background: url(../images.wikia.com/common/skins/quartz/sapphire/images/nav_bullet.gif) 0% 4px no-repeat;
+	color: #000;
+}
+
+/*** Article ***/
+.articleBar {
+	background: url(../images.wikia.com/common/skins/quartz/sapphire/images/article_bars.gif) top left no-repeat;
+	color: #FFF;
+}
+.articleBar div {
+	background: url(../images.wikia.com/common/skins/quartz/sapphire/images/article_bars.gif) top right no-repeat;
+}
+.articleBar a {
+	color: #000;
+}
+/*
+.articleBar .editButton, .articleBar .editButton span {
+	background-image: url(http://images.wikia.com/common/skins/quartz/sapphire/images/edit_button.gif);
+	color: #FFF;
+}
+*/
+table#wikiafooter, table#wikiafooter td a {
+	color: #000;
+}
+a#wikiaFooterLogo {
+	background: url(../images.wikia.com/uglybetty/images/9/9d/Wikialogo-small.gif);
+}
+
+#spotlights {
+       background-color: #F5F5F5;border-color: #999999;
+}
+
+/* widgets integration */
+li.widget {
+	border-color: #999;
+	background: #F5F5F5;
+	color: #000;
+}
+li.widget a, li.widget a:visited {
+	color: #000;
+}
+li.widget h1 {
+	color: #36C;
+}
+.roundedDiv b.xb2, .roundedDiv b.xb3, .roundedDiv b.xb4 {
+	background: #f2f2f2;
+	border-color: #999;
+}
+.roundedDiv b.xb1 {
+	background: #87888C;
+}
+
+.roundedDiv div.r_boxContent {
+	background: #f2f2f2;
+	border-color: #87888C;
+	color: #000;
+}
+.widgetWikiaToolbox .listHdr {
+	color: #36C;
+}
+
+div.wikiaDialog .hd,
+div.wikiaDialog h2,
+.boxHeader_noBorderMargin,
+.boxHeader_noBorder,
+.boxHeader {
+	color: #36C !important;
+	border-color: #87888c;
+}
+
+.wikiaDialog form table td,
+.wikiaDialog form table td a
+{
+    color: #000000 !important;
+}
+
+#switchSkin a {
+	color: #FFF;
+}
+
+/* AutoComplete/SearchSuggest - Inez */
+.yui-ac-content li.yui-ac-highlight {
+	background: #36C !important;
+}
+.yui-ac-content li.yui-ac-prehighlight {
+	background: #36C !important;
+}
+
+/* tooltips */
+.wikiaTooltip {
+	background-color: #ffec3b;
+	border-color: #FFD242;
+}
+
+.prefSection {
+	background: #EEE;
+}
+/*
+<pre>
+*/
+
+
+h2 {margin-top: 20px;}
+
+.toc {margin-top: 20px;}
+
+blockquote {padding-right: 150px}
+
+.unpatrolled {display: none !important; }
+
+.hiddenStructure {display: none;}
+
+a {text-decoration: none; color: #002bb8; background: none;}
+
+a:visited {color: #5a3696;}
+
+a:active {color: #faa700;}
+
+a:hover {text-decoration: underline;}
+
+a.stub {color: #772233;}
+
+a.new, #p-personal a.new {color: #ba0000;}
+
+ .mw-plusminus-pos {
+  display: none;
+}
+ .mw-plusminus-neg {
+  display: none;
+}
+ .mw-plusminus-null {
+  display: none;
+}
+
+
+a.new:visited, #p-personal a.new:visited {color: #a55858;}
+
+/* Display text below main article header, located at MediaWiki:tagline */
+#siteSub {
+    display: inline;
+    font-size: 90%;
+    font-weight: normal;
+    font-style: italic;
+    text-align: right;
+
+}
+
+/***********************************************************
+** Formatting for "hidden" Appearences section; cc-by-nc by [[w:c:MemoryAlpha:User:Bp]] at [[w:c:MemoryAlpha:User:Bp/interactive tree script]]
+*/
+.hiddenlist { display:none; }
+.visiblelist { display:block; }
+
+.listexpand { text-decoration: none; color: #002BB8; }
+.listexpand:hover { text-decoration: underline; color: #002BB8; }
+
+/*
+</pre>
+*/

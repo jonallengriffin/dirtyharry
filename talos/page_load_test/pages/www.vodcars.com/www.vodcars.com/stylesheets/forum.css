@@ -1,0 +1,231 @@
+/* forums Page
+ _________________________________________*/
+
+td, th, span {
+    padding: 5px;
+}
+
+blockquote {
+    background-color: #eee;
+    border: 1px #999 solid;
+    padding: 5px;
+}
+
+#editor_title
+{
+
+    background-color: #dedfdf;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    border: 5px #eee solid;
+}
+
+#thread_preview {
+    height: 400px;
+    overflow: auto;
+    border: 1px #bbb dashed;
+    display: none;
+}
+
+#expand {
+    display: inline;
+}
+
+#contract {
+    display: none;
+}
+
+#expand a {
+    text-decoration : none;
+}
+
+#contract a {
+    text-decoration : none;
+}
+
+.tip {
+    color: #ccc;
+    font-size: 10px;
+}
+
+#quick_respond_form 
+{
+    background-color: #fff;
+    border: 1px #eee solid;
+    width: 900px;
+}
+    
+#quick_respond_form .col1
+{
+    width: 300px;
+    text-align: right;
+    vertical-align: top;
+}
+    
+#quick_respond_form .col2
+{
+    width: 800px;
+    text-align: left;
+}
+
+textarea.tinymce2
+{
+    height: 500px;
+    width: 448px;
+}
+
+code {
+    background-color: #ddd;
+    border: 1px #999 solid;
+    padding: 10px;
+    width: 95%;
+    display: block;
+}
+
+.faded {
+    color: #CCC;
+}
+
+#forums {
+    margin-left: 50px;
+}
+
+table#forum {
+    width: 900px;
+    background-color: #999;
+}
+
+table#forum tr td div.title {
+    width: 300px;
+}
+
+
+table#forum tr td{
+    margin: 1px;
+    background-color: #FFF;
+}
+
+table#forum tr.subforum {
+    padding: 5px;
+}
+
+table#forum tr.subforum{
+    font-weight: normal;
+    font-size: 15px;
+    width: 100%;
+    height: 22px;
+    clear: both;
+}
+
+table#forum tr.subforum td.titlebar{
+    font-weight: bold;
+    width: 390px;
+}
+
+table#forum tr.subforum td.titlpostdesc{
+    font-weight: bold;
+    width: 300px;
+}
+
+table#forum tr.subforum td.titlelement{
+    font-weight: bold;
+}
+
+table#forum tr.subforum td{
+    font-size: 12px;
+}
+
+table#forum tr.subforum td.body{
+    width: 400px;
+}
+
+table#forum tr.subforum  td.body .title{
+    width: 380px;
+}
+
+table#forum tr.subforum  td.body .desc{
+    width: 380px;
+}
+
+
+table#forum tr.subforum  td.body .desc a{
+    text-decoration: none;
+}
+
+table#forum tr.subforum  td.postdesc{
+    width: 400px;
+}
+
+table#forum tr.subforum  td.element{
+}
+
+
+table#thread {
+    width: 900px;
+    background-color: #666;
+}
+
+table#thread td {
+    margin: 1px;
+    background-color: #FFF;
+}
+
+#thread .threadtitle {
+    text-align: left;
+    font-size: 15px;
+}
+
+.post {
+    color: #000;
+}
+.post .user{
+    color: #000;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    vertical-align: top;
+}
+.post .title{
+    color: #000;
+    padding: 5px;
+}
+.post .date{
+    color: #000;
+    width: 325px;
+    text-align: center;
+}
+.post .body{
+    color: #000;
+    padding: 10px 5px 10px 5px;
+}
+.post .tools{
+    color: #000;
+    text-align: right;
+    padding : 5px 10px 5px 10px;
+}
+
+#editor {
+    padding: 20px;
+    width: 950px;
+}
+
+#editor #container{
+    padding: 0px;
+    width: 100%
+}
+
+#markdown_syntax {
+    color: #000;
+    padding: 10px;
+    float: right;
+    width: 250px;
+    margin: 0 0 0 10px;
+    padding: 5px;
+    background-color: #FFF;
+}
+
+#markdown_syntax p {
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+}

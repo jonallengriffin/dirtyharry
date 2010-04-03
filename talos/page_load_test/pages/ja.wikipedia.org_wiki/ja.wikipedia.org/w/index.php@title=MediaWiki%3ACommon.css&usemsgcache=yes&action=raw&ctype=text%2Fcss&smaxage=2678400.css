@@ -1,0 +1,762 @@
+/* Common CSS for all skins */
+
+/*
+<source lang="css">
+*/
+
+/* make the list of references look smaller */
+ol.references {
+   font-size: 100%;
+}
+
+.references-small { font-size: 90%;}
+
+/* wikitable/prettytable class for skinning normal tables */
+table.wikitable,
+table.prettytable {
+	background:	#f9f9f9;
+	border:	1px #aaa solid;
+	border-collapse:	collapse;
+}
+
+table.wikitable th, table.wikitable td,
+table.prettytable th, table.prettytable td {
+	border:	1px #aaa solid;
+	padding:	0.2em;
+}
+
+table.wikitable th,
+table.prettytable th {
+	background:	#f2f2f2;
+	text-align:	center;
+}
+
+table.wikitable caption,
+table.prettytable caption {
+	margin-left:	inherit;
+	margin-right:	inherit;
+}
+
+/* default skin for navigation boxes */
+table.navbox {
+    background-color: #f9f9f9;
+    border: 1px solid #aaaaaa;
+    clear: both;
+    font-size: 90%;
+    margin: 1em 0em 0em;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+table.navbox th {
+    background-color: #ccccff;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+table.navbox tr:not(:first-child) th {
+    background-color: #ddddff;
+}
+
+@media print {
+    .navbox {
+        display: none;
+    }
+}
+
+/* Style for "notices" */
+.notice {
+	text-align:	justify;
+	margin:	1em;
+	padding:	0.2em;
+}
+
+#disambig {
+	border-top:	3px double #ccc;
+	border-bottom:	3px double #ccc;
+}
+
+#spoiler {
+	border-top:	2px solid #ddd;
+	border-bottom:	2px solid #ddd;
+}
+
+h1 {
+	line-height:1.2em;
+}
+/* Standard talk template style */
+.Talk-Notice {
+	border:	1px solid #c0c090;
+	background-color:	#f8eaba;
+	margin-bottom:	3px;
+	width:	85%;
+	border-spacing:	3px;
+	margin-left:	auto;
+	margin-right:	auto;
+}
+
+.Talk-Notice:after {
+	content:	"The CSS for this template should be changed. See [[Wikipedia:Template Standardisation]]."
+}
+
+/* Make template background appear correctly on all browsers */
+.Talk-Notice td {
+	background:	inherit;
+}
+
+/* Metadata */
+table.metadata {
+	border:	1px solid #aaa;
+	display:	none;
+}
+
+.metadata-label {
+	color:	#aaa;
+}
+
+/*Add formatting to make sure that "external references" from [[Template:Ref]] do
+	not get URL expansion, not even when printed. The mechanism up to MediaWiki 1.4 was
+	that the HTML code contained a SPAN following the anchor A; this SPAN had the class
+	"urlexpansion", which was not displayed on screen, but was shown when the medium was
+	"print". The rules below ensure (a) that there is no extra padding to the right of
+	the anchor (displayed as "[<number>]"), (b) that there is no "external link arrow" for
+	the link, and (c) that this SPAN of class "urlexpansion" is never shown.
+	~~~~
+*/
+.plainlinksneverexpand {
+	background:	none !important;
+	padding:	0 !important;
+}
+
+.plainlinksneverexpand .urlexpansion {
+	display :	none !important;
+}
+
+/* Make sure that ext links displayed within "plainlinksneverexpand" don't get
+	the arrow...
+*/
+.plainlinksneverexpand a {
+	background:	none !important;
+	padding:	0 !important
+}
+
+/* With MediaWiki 1.5, the mechanism has changed: instead of a SPAN of class "urlexpansion"
+	following the anchor A, the anchor itself now has class "external autonumber" and the
+	expansion is inserted when printing (see the common printing style sheet at
+	http:	//en.wikipedia.org/skins-1.5/common/commonPrint.css) using the ":after" pseudo-
+	element of CSS. We have to switch this off for links due to Template:	Ref!
+	~~~~
+*/
+.plainlinksneverexpand a.external.text:after {
+	display:	none !important;
+}
+
+.plainlinksneverexpand a.external.autonumber:after {
+	display:	none !important;
+}
+
+/* Merge template style */
+.messagebox {
+	border:	1px solid #aaa;
+	background:	#f9f9f9;
+	width:	80%;
+	margin:	0 auto 1em auto;
+	padding:	.2em;
+	text-align:	justify;
+}
+
+.messagebox.merge {
+	border:	solid #033 2px;
+	width:	55%;
+	background:	#eff;
+	padding:	1em;
+	margin:	1em auto 1em auto;
+}
+
+.messagebox.cleanup {
+	border:	1px solid #9f9fff;
+	background:	#efefff;
+	text-align:	center;
+}
+
+.messagebox.standard-talk {
+	border:	1px solid #c0c090;
+	background:	#f8eaba;
+}
+
+.infobox {
+	border:	1px solid #aaa;
+	background:	#f9f9f9;
+	color:	black;
+	margin-bottom:	0.5em;
+	margin-left:	1em;
+	padding:	.2em;
+	float:	right;
+	clear:	right;
+}
+
+.infobox th, .infobox td {
+	vertical-align:	top;
+}
+
+.infobox caption {
+	margin-left:	inherit;
+}
+
+.infobox.bordered {
+	border-collapse:	collapse;
+}
+
+.infobox.bordered td, .infobox.bordered th {
+	border:	1px solid #aaa;
+}
+
+.infobox.sisterproject {
+	width:	20em;
+	font-size:	90%;
+}
+
+/* Put a checker background at the image description page only visible if the image has transparent background */
+
+#file img { background: url("../../upload.wikimedia.org/wikipedia/commons/5/5d/Checker-16x16.png") repeat }
+
+/* Support for Template:IPA, Template:Unicode and Template:Polytonic. The inherit declaration resets the font for all browsers except MSIE6.  The empty comment must remain. */
+.IPA {
+	font-family:	'Chrysanthi Unicode', 'Doulos SIL', 'Gentium', 'GentiumAlt', 'Code2000', 'TITUS Cyberbit Basic', 'DejaVu Sans', 'Bitstream Vera Sans', 'Bitstream Cyberbit', 'Arial Unicode MS', 'Lucida Sans Unicode', 'Hiragino Kaku Gothic Pro', 'Matrix Unicode', sans-serif;
+}
+
+.Unicode {
+	font-family:	'TITUS Cyberbit Basic', 'Code2000', 'Doulos SIL', 'Chrysanthi Unicode', 'Bitstream Cyberbit', 'Bitstream CyberBase', 'Bitstream Vera', 'Thryomanes', 'Gentium', 'GentiumAlt', 'Visual Geez Unicode', 'Lucida Grande', 'Arial Unicode MS', 'Microsoft Sans Serif', 'Lucida Sans Unicode', sans-serif;
+}
+
+.polytonic {
+	font-family:	'Athena', 'Gentium', 'Palatino Linotype', 'Arial Unicode MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Code2000', sans-serif;
+}
+
+.SAMPA {
+	font-family:	'Courier',monospace
+}
+
+#wpSave {
+	font-weight:	bold;
+}
+
+/* hiddenStructure from Monobook - allows selective hiding of markup in templates */
+.hiddenStructure {
+	display:	none;
+	speak:	none;
+}
+
+/* Icons for medialist templates [[Template:Listen]], [[Template:Multi-listen_start]], [[Template:Video]], [[Template:Multi-video_start]] */
+
+div.listenlist {
+    background: url("../../upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Gnome-speakernotes.png/30px-Gnome-speakernotes.png");
+    padding-left: 40px;
+}
+
+div.videolist, div.multivideolist {
+    background: url("../../upload.wikimedia.org/wikipedia/en/thumb/2/20/Tango-video-x-generic.png/40px-Tango-video-x-generic.png");
+    padding-left: 50px;
+}
+
+/* Style rules for media list templates */
+
+div.medialist {
+    min-height: 50px;
+    margin: 1em;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+div.medialist ul {
+    list-style-type: none; 
+    list-style-image: none;
+    margin: 0;
+}
+
+div.medialist ul li {
+    padding-bottom: 0.5em;
+}
+
+div.medialist ul li li {
+    font-size: 91%;
+    padding-bottom: 0;
+}
+
+/************************/
+/* CommonsTicker styles */
+/************************/
+
+/* links */
+.tickerDiffLink { } /* diff links in ticker */
+.tickerMiscLink { } /* misc links in ticker */
+
+/* remove list bullets */
+.tickerList ul,    .tickerList ul li    { list-style: none; text-indent:-2em; margin-left:2em;   text-align:left; }
+.tickerList ul ul, .tickerList ul ul li { list-style: none; text-indent:0;    margin-left:1.5em; text-align:left; }
+
+/* per-type styles */
+.tickerEntry_deleted     { }  /* entry for image deletion */
+.tickerEntry_replaced    { }  /* entry for image replacement */
+.tickerEntry_tagged      { }  /* entry for adding/removing problem tags */
+.tickerEntry_redir       { }  /* entry for critical redirection (fot tag redirects) */
+.tickerEntry_recat       { }  /* entry for critical re-categorization (for tag categories) */
+.tickerEntry_notify      { }  /* entry for global notifications */
+.tickerEntry_changed     { }  /* entry for generic change */
+
+/* per-action styles */
+.tickerAction_deleted:before     { content:" GONE "; color: #FF0000; font-family:monospace; font-weight:bold; font-size:100%; }  
+.tickerAction_deletedRev:before  { content:" -OLD "; color: #DDAAAA; font-family:monospace; font-weight:bold; font-size:100%; }  
+.tickerAction_replaced:before    { content:" REPL "; color: #CC88FF; font-family:monospace; font-weight:bold; font-size:100%; }  
+.tickerAction_replacedOwn:before { content:" UPDT "; color: #EEAAFF; font-family:monospace; font-weight:bold; font-size:100%; }  
+.tickerAction_addedBad:before    { content:" +VfD "; color: #FF8800; font-family:monospace; font-weight:bold; font-size:100%; }  
+.tickerAction_removedBad:before  { content:" -VfD "; color: #00BB00; font-family:monospace; font-weight:bold; font-size:100%; }  
+.tickerAction_addedGood:before   { content:" +OK  "; color: #00BB00; font-family:monospace; font-weight:bold; font-size:100%; }  
+.tickerAction_removedGood:before { content:" -OK  "; color: #FF8800; font-family:monospace; font-weight:bold; font-size:100%; }
+
+/* ticker usage list */
+.tickerUsage  { font-size:80%; }  
+
+/* entry applies to a template used by multiple images */
+.tickerTemplateEntry    { font-weight: bold; } 
+
+/* entry applies to sub-entries, i.e. images that use a specific template */
+.tickerSubEntry         { }                       
+
+/* minor entry styles */ 
+.tickerMinorEntry  { color:#666; }     /* minor entry */
+.tickerMinorEntry a,
+.tickerMinorEntry a:link,
+.tickerMinorEntry a:visited { color:#669; }
+#bodyContent .tickerMinorEntry a.extiw,
+#bodyContent .tickerMinorEntry a.extiw:link,
+#bodyContent .tickerMinorEntry a.extiw:visited { color:#669; }
+
+/* Coloured watchlist numbers */
+.mw-plusminus-pos {
+  color:darkgreen;
+}
+
+/* .mw-plusminus-null currently at developer default */
+
+.mw-plusminus-neg {
+  color:darkred;
+}
+
+/* Change the external link icon to an Adobe icon anywhere the PDFlink class */
+/* is used (notably Template:PDFlink). This works in IE, unlike the above. */
+span.PDFlink a {
+    background: url(../../upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif) center right no-repeat !important;
+    padding-right: 17px !important;
+}
+
+/* infoboxCountry [[Template:基礎情報 国]]等に */
+dl#infoboxCountry {
+    clear:right;
+    float:right;
+    width:300px;
+    margin-left:0.5em;
+    background:#fff;
+}
+dl#infoboxCountry dt.infoboxCountryNameJa {
+    font-size:1.36em;
+    margin:0 0 0.13em;
+    text-align:center;
+}
+dl#infoboxCountry dt.infoboxCountryName {
+    font-size:1.13em;
+    font-weight:normal;
+    margin:0 0 0.13em;
+    text-align:center;
+}
+
+dl#infoboxCountry dd.infoboxCountryDataA {
+    margin:0;
+    padding:0;
+    border-color:#aaa;
+    border-width:1px;
+    border-style:solid solid none;
+    background:#f9f9f9;
+}
+
+dl#infoboxCountry table.infoboxCountryPrevSucc {
+    width:298px;
+    border-collapse:collapse;
+    font-size:0.95em;
+    background:#f9f9f9;
+}
+dl#infoboxCountry table.infoboxCountryPrevSucc td {
+    margin:0;
+    padding:4px;
+    text-align:center;
+}
+dl#infoboxCountry td.infoboxCountryPrev {
+    text-align:left;
+    width:60px
+}
+dl#infoboxCountry td.infoboxCountrySucc {
+    text-align:right;
+    width:60px;
+}
+
+dl#infoboxCountry table.infoboxCountryInsignia {
+    width:298px;
+    border-collapse:collapse;
+    font-size:0.95em;
+    background:#eee;
+    text-align:center;
+    border-top:#aaa 1px solid;
+}
+dl#infoboxCountry table.infoboxCountryInsignia th {
+    padding:4px;
+    width:50%;
+    border:none;
+}
+dl#infoboxCountry table.infoboxCountryInsignia td {
+    padding:4px;
+    font-size:0.85em;
+}
+dl#infoboxCountry dd.infoboxCountryAdd,
+dl#infoboxCountry dd.infoboxCountryMotto,
+dl#infoboxCountry dd.infoboxCountryAnthem,
+dl#infoboxCountry dd.infoboxCountryMap {
+    text-align:center;
+    width:290px;
+    margin:0;
+    padding:4px;
+    border-color:#aaa;
+    border-width:1px;
+    border-style:solid solid none;
+}
+dl#infoboxCountry dd.infoboxCountryAdd,
+dl#infoboxCountry dd.infoboxCountryMotto,
+dl#infoboxCountry dd.infoboxCountryAnthem {
+    font-size:0.8em;
+    background:#f9f9f9;
+}
+dl#infoboxCountry dd.infoboxCountryMap {
+}
+
+dl#infoboxCountry dd.infoboxCountryDataB {
+    margin:0;
+    padding:0;
+    border:#aaa 1px solid;
+}
+dl#infoboxCountry dd.infoboxCountryDataB table {
+    width:298px;
+    border-collapse:collapse;
+    border-color:#aaa;
+    font-size:0.9em;
+    background:#f9f9f9;
+    line-height:1.3;
+}
+dl#infoboxCountry dd.infoboxCountryDataB tr {
+    border-color:#aaa;
+    vertical-align:top;
+}
+dl#infoboxCountry dd.infoboxCountryDataB th {
+    padding:4px;
+    border-color:#aaa;
+    border-width:1px;
+    text-align:left;
+    font-weight:normal;
+    width:50%;
+}
+dl#infoboxCountry dd.infoboxCountryDataB td {
+    padding:4px;
+    border-color:#aaa;
+    border-width:1px;
+    width:50%;
+}
+
+dl#infoboxCountry td.infoboxCountrySome {
+    padding:0;
+}
+dl#infoboxCountry td.infoboxCountrySome dl,
+dl#infoboxCountry td.infoboxCountrySome dl dd {
+    margin:0;
+    padding:0;
+}
+dl#infoboxCountry td.infoboxCountrySome dl dt {
+    margin:0;
+    padding:4px;
+    font-weight:normal;
+    border-top:#aaa 1px solid;
+}
+dl#infoboxCountry td.infoboxCountrySome dl dt.infoboxCountryLeader {
+    border-top:none;
+}
+dl#infoboxCountry td.infoboxCountrySome dl table {
+    width:100%;
+    font-size:100%;
+    border-collapse:collapse;
+    background:#f9f9f9;
+}
+dl#infoboxCountry td.infoboxCountrySome dl th {
+    width:50%;
+    padding:4px;
+    text-indent:0.75em;
+}
+dl#infoboxCountry td.infoboxCountrySome dl td {
+    width:50%;
+    padding:4px;
+    border-color:#aaa;
+    border-width:1px;
+    border-style:solid none none solid;
+}
+
+dd#Infobox_before-after {
+    width:298px;
+    margin:0;
+    padding:0;
+    border-color:#aaa;
+    border-width:1px;
+    border-style:none solid solid;
+    background:#f9f9f9;
+}
+dd#Infobox_before-after table {
+    border-collapse:collapse;
+    width:100%;
+    background:transparent;
+}
+dd#Infobox_before-after th {
+    width:50%;
+    padding:0 4px;
+}
+dd#Infobox_before-after th.infoboxCountryPrev {
+    border-right:#ccc 1px solid;
+}
+dd#Infobox_before-after th.infoboxCountrySucc {
+    border-left:#ccc 1px solid;
+}
+dd#Infobox_before-after td.infoboxCountryPrev {
+    width:50%;
+    padding:2px 4px;
+    font-size:80%;
+    text-align:left;
+    vertical-align:top;
+    border-color:#ccc;
+    border-width:1px;
+    border-style:solid solid none none;
+}
+dd#Infobox_before-after td.infoboxCountrySucc {
+    width:50%;
+    padding:2px 4px;
+    font-size:80%;
+    text-align:right;
+    vertical-align:top;
+    border-color:#ccc;
+    border-width:1px;
+    border-style:solid none none solid;
+}
+
+dl#infoboxCountry dd.infoboxCountryNote {
+    font-size:0.75em;
+    width:290px;
+    margin:0;
+    padding:2px 4px;
+    border-color:#aaa;
+    border-width:1px;
+    border-style:none solid solid;
+    background:#f9f9f9;
+}
+
+/* ### nowrap for some table headings ### */
+label[for="wpUserEmail"], label[for="wpNick"], label[for="wpUserLanguage"],
+label[for="wpOldpass"], label[for="wpNewpass"], label[for="wpRetypePass"],
+#userlogin2 label, #userloginForm label { white-space:nowrap }
+
+/* リダイレクトの表示 */
+
+/* [[特別:Allpages]]・[[特別:Prefixindex]] */
+.allpagesredirect a:link,
+.allpagesredirect a:visited,
+/* カテゴリ内 */
+.redirect-in-category a:link,
+.redirect-in-category a:visited,
+/* ウォッチリスト */
+.watchlistredir a:link,
+.watchlistredir a:visited {
+	color:	#666;
+}
+
+/* NavFrame関係。[[MediaWiki:Monobook.css]]も参照 */
+div.Boxmerge,
+div.NavFrame {
+ margin: 0px;
+ padding: 2px;
+ border: 1px solid #aaaaaa;
+ text-align: center;
+ border-collapse: collapse;
+ font-size: 95%;
+}
+div.Boxmerge div.NavFrame {
+ border-style: none;
+ border-style: hidden;
+}
+div.NavPic {
+ background-color: #ffffff;
+ margin: 0px;
+ padding: 2px;
+ float: left;
+}
+div.NavFrame div.NavHead {
+ height: 1.6em;
+ font-weight: bold;
+ font-size: 100%;
+ background-color: #efefef;
+ position:relative;
+ text-align:center;
+}
+div.NavFrame p {
+ font-size: 100%;
+}
+div.NavFrame div.NavContent {
+ font-size: 100%;
+}
+div.NavFrame div.NavContent p {
+ font-size: 100%;
+}
+div.NavEnd {
+ margin: 0px;
+ padding: 0px;
+ line-height: 1px;
+ clear: both;
+}
+a.NavToggle {
+ position:absolute;
+ top:0px;
+ right:3px;
+ font-weight:normal;
+/* font-size:83.3%;*/
+}
+
+/* NetabareSpoiler関係 */
+.NetabareSpoiler a.NavToggle { position:static; }
+@media print {
+ .NetabareSpoiler div.NavContent {
+  display: block;
+ }
+ .NetabareSpoiler div.NavHead {
+  display: none;
+ }
+}
+
+/* お知らせテンプレート (Article message box, ambox) */
+table.ambox {
+  margin: 0 10%;                         /* Will not overlap with other elements */
+  border-collapse: collapse; 
+  background: #fbfbfb; 
+  border: 1px solid #aaa; 
+  border-left: 10px solid #1e90ff;       /* 初期値: 「お知らせ」の青 */
+  font-size: 90%;
+}
+table.ambox th.ambox-text, table.ambox td.ambox-text {      /* メッセージ本体のセル */
+  padding: 0.25em 0.5em;              /* 左右に 0.5em ずつのパディング */
+  width: 100%;                        /* 全テンプレートでテキスト量にかかわらず同サイズに */
+}
+table.ambox td.ambox-image {          /* 左側の画像セル */
+  padding: 2px 0px 2px 0.5em;         /* 左に 0.5em, 右に 0px のパディング */
+  text-align: center; 
+}
+table.ambox td.ambox-imageright {     /* 右側の画像セル */
+  padding: 2px 4px 2px 0px;           /* 左に 0px , 右に 4px のパディング */
+  text-align: center; 
+}
+table.ambox-notice {
+  border-left: 10px solid #1e90ff;       /* 青 */
+/* border-right: 10px solid #1e90ff; */  /* If you want two blue bars */
+}
+table.ambox-delete,
+table.ambox-serious {
+  border-left: 10px solid #b22222;       /* 赤 */
+}
+table.ambox-content {
+  border-left: 10px solid #f28500;       /* 橙 */
+}
+table.ambox-style {
+  border-left: 10px solid #f4c430;       /* 黄 */
+}
+table.ambox-merge {
+  border-left: 10px solid #9932cc;       /* 紫 */
+}
+table.ambox-protection {
+  border-left: 10px solid #bba;          /* 灰色 */
+}
+table.ambox.ambox-mini {                 /* small floating box variant */
+    float: right;
+    clear: right;
+    margin: 0 0 0 1em;
+    width: 272px;
+    border-left: 1px solid #aaa;
+    line-height: 1.2;
+    font-size: smaller;
+}
+/* ambox - 以下、日本語版の独自拡張 */
+table.ambox div.ambox-imagecontainer {   /* 画像セル内の画像表示領域 */
+  width: 52px;
+}
+table.ambox.ambox-section {              /* 節用メッセージボックス */
+  margin: 0;                             /* マージンを取らない */
+  font-size: 80%;
+}
+table.ambox.ambox-section div.ambox-imagecontainer {
+  width: 30px;
+}
+table.ambox.ambox-section th.ambox-text,
+table.ambox.ambox-section td.ambox-text {
+  padding: 0.1em 0.3em;
+}
+
+/* [[Template:Pathnav]] */
+.pathnavbox {
+	clear: both;
+	border: 1px outset #eef;
+	padding: 0.3em 0.6em;
+	margin: 0 0 0.5em 0;
+	background-color: #eef;
+	font-size: 90%;
+}
+.pathnavbox ul {
+	list-style: none none;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.pathnavbox > ul {
+	margin: 0;
+}
+.pathnavbox ul li {
+	margin: 0;
+}
+
+/* 脚注ジャンプ先強調 */
+ol.references > li:target { 
+  background-color: #DEF;
+}
+sup.reference:target { 
+  background-color: #DEF;
+}
+cite:target { 
+  background-color: #DEF;
+}
+
+/* Otheruses等の冒頭曖昧さ回避テンプレート */
+.dablink {
+  margin: 0.5em 0;
+  background-color: #f8f8f8;
+  border: 1px solid #aaa;
+  padding: 3px;
+  font-size: 90%;
+}
+
+/* どの見出しレベルまで目次に表示するかを制限します。例えば、<div class="toclimit-3"> とすると
+   ==headings== と ===headings=== が目次に反映され、これより下の見出しレベルは無視されます。*/
+.toclimit-2 .toclevel-2 {display:none;}
+.toclimit-3 .toclevel-3 {display:none;}
+.toclimit-4 .toclevel-4 {display:none;}
+.toclimit-5 .toclevel-5 {display:none;}
+.toclimit-6 .toclevel-6 {display:none;}
+.toclimit-7 .toclevel-7 {display:none;}
+
+/*</source>*/

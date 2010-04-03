@@ -1,0 +1,85 @@
+
+/* 
+
+'''注意:''' スキンに関係しないものは[[MediaWiki:Common.css]]で設定できます。
+
+ツール: [http://ja.uncyclopedia.info/index.php?title=MediaWiki:Uncyclopedia.css&action=raw&ctype=text/css&smaxage=18000 キャッシュのリロード] | [http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fja.uncyclopedia.info%2Findex.php%3Ftitle%3DMediaWiki%3AUncyclopedia.css%26action%3Draw%26ctype%3Dtext%2Fcss%26smaxage%3D18000&usermedium=all W3C妥当性検証]
+
+<pre><nowiki>*/
+ 
+/* Bottom box borders. -Paulgb */
+.pBody {
+padding-top: 3px;
+border-bottom: 1.4px solid rgb(170, 170, 170);
+}
+ 
+/* White borders for images on non-white backgrounds. Updated to only work when needed. 
+To use, add: <nowiki><div class="nonwhite">[[Image:Imagetag]]</div></nowiki> <!-- Ignore the <nowiki></nowiki> --> -Paulgb */
+.nonwhite div.thumb {
+border: none;
+margin-top: 10px;
+margin-bottom: 0px;
+}
+.nonwhite div.tleft { border: none; }
+.nonwhite div.tright { margin-left: 13px; }
+
+/* Forum formatting -Algorithm & -Splaka */
+.forumheader { border: 1px solid #aaa; background-color: #f9f9f9; margin-top: 1em; padding: 12px; }
+.forumlist td.forum_edited a { color: black; text-decoration: none }
+.forumlist td.forum_title a { padding-left: 20px; }
+.forumlist td.forum_title a.forum_new { font-weight: bold; background: url(http://ja.uncyclopedia.info/images/1/11/Newmsg.png) center left no-repeat; padding-left: 20px; }
+.forumlist td.forum_title a.forum_new:visited { font-weight: normal; background: none; padding-left: 20px; }
+.forumlist th.forum_title { padding-left: 20px; }
+
+/* Maintenance formatting -Algorithm */
+.expired td.forum_title a { font-weight: bold }
+.expired td.forum_title a.forum_new { font-weight: normal }
+
+/* custom namespace logos (still under testing, this only works on full namespaces) -Splaka */
+/* Image: and Image_talk: */
+body.ns-6 #p-logo a { background-image: url(http://commons.uncyclomedia.org/images/d/d5/Uncyclomedia_Commons.png) !important; }
+body.ns-7 #p-logo a { background-image: url(http://commons.uncyclomedia.org/images/d/d5/Uncyclomedia_Commons.png) !important; }
+/* UnNews: and UnNews_talk: */
+body.ns-102 #p-logo a { background-image: url(http://commons.uncyclomedia.org/images/0/02/UnNews_Logo_Potato.png) !important; }
+body.ns-103 #p-logo a { background-image: url(http://commons.uncyclomedia.org/images/0/02/UnNews_Logo_Potato.png) !important; }
+/* Undictionary: and Undictionary_talk: */
+body.ns-104 #p-logo a { background-image: url(http://commons.uncyclomedia.org/images/4/47/Undictionary_Logo_Text.png) !important; }
+body.ns-105 #p-logo a { background-image: url(http://commons.uncyclomedia.org/images/4/47/Undictionary_Logo_Text.png) !important; }
+/* Game: and Game_talk: */
+body.ns-106 #p-logo a { background-image: url(http://commons.uncyclomedia.org/images/9/92/Game-Logo.png) !important; }
+body.ns-107 #p-logo a { background-image: url(http://commons.uncyclomedia.org/images/9/92/Game-Logo.png) !important; }
+/* Forum: and Forum_talk: */
+body.ns-110 #p-logo a { background-image: url(http://commons.uncyclomedia.org/images/6/61/Forum_Logo_Soapboxes.png) !important; }
+body.ns-111 #p-logo a { background-image: url(http://commons.uncyclomedia.org/images/d/db/Forum_talk.png) !important; }
+/* Untunes and Untunes_talk: */
+body.ns-112 #p-logo a { background-image: url(http://images.wikia.com/uncyclopedia/images/b/bf/UnTunes.png) !important; }
+body.ns-113 #p-logo a { background-image: url(http://images.wikia.com/uncyclopedia/images/b/bf/UnTunes.png) !important; }
+
+/* default coloring for Special:Allmessages (missing from our default skin) -Spl 09:21, 9 March 2006 (UTC) */
+#allmessagestable th { background-color: #b2b2ff; }
+#allmessagestable tr.orig { background-color: #ffe2e2; }
+#allmessagestable tr.new { background-color: #e2ffe2; }
+#allmessagestable tr.def { background-color: #f0f0ff; }
+
+/* this is to force title-left, title-right, and Title-center to display only in the default skin -Spl */
+#titlehack { display:inline !important; }
+
+/* comment boxes adapted from french wikipedia. Applied to Forum_talk: currently -keitei */
+.ns-111 #content, .ns-111 #p-cactions li, .ns-111 #p-cactions li a {background: #F8FCFF;}
+.ns-111 dd { margin: 0; padding: 0; }
+.ns-111 dl { border-top: solid 1px #70E0E0; border-left: solid 1px #70E0E0; padding-top: 0.5em; padding-left: 0.5em; margin-left: 1em; }
+.ns-111 dl { background-color: #EEF6FF; }
+.ns-111 dl dl { background-color: #F8FCFF; }
+.ns-111 dl dl dl { background-color: #EEF6FF; }
+.ns-111 dl dl dl dl { background-color: #F8FCFF; }
+.ns-111 dl dl dl dl dl { background-color: #EEF6FF; }
+.ns-111 dl dl dl dl dl dl { background-color: #F8FCFF; }
+.ns-111 dl dl dl dl dl dl dl { background-color: #EEF6FF; }
+.ns-111 dl dl dl dl dl dl dl dl { background-color: #F8FCFF; }
+.ns-111 dl dl dl dl dl dl dl dl dl { background-color: #EEF6FF; }
+.ns-111 dl dl dl dl dl dl dl dl dl dl { background-color: #F8FCFF; }
+.ns-111 dl dl dl dl dl dl dl dl dl dl dl { background-color: #EEF6FF; }
+.ns-111 dl dl dl dl dl dl dl dl dl dl dl dl { background-color: #F8FCFF; }
+.ns-111 dl dl dl dl dl dl dl dl dl dl dl dl dl { background-color: #EEF6FF; }
+.ns-111 dl dl dl dl dl dl dl dl dl dl dl dl dl dl { background-color: #F8FCFF; }
+/*</nowiki></pre>*/

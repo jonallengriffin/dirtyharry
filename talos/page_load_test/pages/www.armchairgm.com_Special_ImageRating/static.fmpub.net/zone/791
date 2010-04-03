@@ -1,0 +1,24 @@
+var federated_media_section_source = '';
+if (typeof(federated_media_section) == "string") {
+  federated_media_section_source = ";kw=" + federated_media_section.replace(/([^a-zA-Z0-9_\-\/])|(^\/)/g, "");
+}
+
+var federated_media_tile_791;
+if (typeof(federated_media_tile_791) == "undefined") {
+  federated_media_tile_791 = 1;
+} else {
+  federated_media_tile_791++;
+}
+
+var federated_media_random_number;
+if (typeof(federated_media_random_number) == "undefined") {
+  federated_media_random_number = Math.random()*10000000000000000;
+}
+
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/fmpub.ArmchairGM/;sz=728x90;tile=' + federated_media_tile_791 + ';fmzid=791' + federated_media_section_source + ';ord=' + federated_media_random_number + '?"></scr' + 'ipt>');
+
+var federated_media_section_source = '';
+if (typeof(federated_media_section) == "string" && federated_media_section.replace(/^\s+|\s+$/g, '') != '') {
+  federated_media_section_source = "&amp;s=" + federated_media_section.replace(/([^a-zA-Z0-9_\-\/])|(^\/)/g, "");
+}
+document.write('<div style="position:absolute;left:0px;top:0px;visibility:hidden;"><img src="http://tenzing.fmpub.net/?z=791' + federated_media_section_source + '&amp;fleur_de_sel=' + Math.floor(Math.random()*10000000000000000) + '" alt="" style="width:0px;height:0px;" height="0" width="0" /></div>');

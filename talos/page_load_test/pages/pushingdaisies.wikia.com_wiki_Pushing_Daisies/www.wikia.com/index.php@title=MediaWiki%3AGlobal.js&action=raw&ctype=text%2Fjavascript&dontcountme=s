@@ -1,0 +1,12 @@
+/* Total Global Wikia JS file
+
+'''PLEASE''' note:
+* Will probably not load on Wikia running versions prior to 1.10
+* Should affect '''every''' skin on '''every''' page load, be very careful to not create conflicting javascript variables or functions.
+* Do not edit this unless you are staff or have direct staff approval.
+
+You can edit your personal total global js at: [[w:Special:Mypage/global.js|user/global.js]]
+*/
+
+//temporary, to fix typo someone made in skin addition. Meh!
+if(window.wgIsArticle) var wglsArticle = wgIsArticle

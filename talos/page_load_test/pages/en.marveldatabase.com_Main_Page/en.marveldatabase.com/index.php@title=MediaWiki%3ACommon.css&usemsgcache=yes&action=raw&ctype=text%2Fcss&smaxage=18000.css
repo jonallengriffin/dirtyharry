@@ -1,0 +1,206 @@
+ /***** CSS placed here will be applied to all skins. *****/
+ /* See also: [[MediaWiki:Monobook.css]] */
+ /* <pre> */
+ 
+ /* Removes the title 'Main Page' from the Main Page; it is redundant. */
+body.page-Main_Page #siteSub, 
+body.page-Main_Page #contentSub, 
+body.page-Main_Page h1.firstHeading {
+    display: none !important;
+}
+
+ /* Removes the title 'Category:Characters'; it pushes things too far down. */
+body.page-Category:Characters #siteSub, 
+body.page-Category:Characters #contentSub, 
+body.page-Category:Characters h1.firstHeading {
+    display: none !important;
+}
+
+ /* Removes the titles from the entire News namespace. */
+.ns-112 h1.firstHeading {
+    display: none !important;
+}
+
+/* Changes colour of Staff Member edits */
+ul.special li a[title="User:Jamie"],
+ul.special li a[title="User:Halley"],
+ul.special li a[title="User:Robert Alvarez"],
+ul.special li a[title="User:Psilorder"],
+ul.special li a[title="User:Sleeper"],
+ul.special li a[title="User:Darkhawk"],
+ul.special li a[title="User:Perfectbrak"],
+ul.special li a[title="User:Kokushishin"],
+ul.special li a[title="User:Maxdillon"],
+ul.special li a[title="User:GrnMarvl14"],
+ul.special li a[title="User:WhyBother"],
+ul.special li a[title="User:M1shawhan"],
+ul.special li a[title="User:Copycat989"],
+ul.special li a[title="User:Squirrelloid"],
+ul.special li a[title="User:Peteparker"] { 
+  font-weight: bold; font-style: italic; color: #008800; 
+}
+
+/* Changes colour of Bot edits */
+ul.special li a[title="User:JamieBot"],
+ul.special li a[title="User:PeteparkerBot"] { 
+  font-weight: bold; font-style: italic; color: #ff00ff; 
+}
+
+/* NOT SURE what this does... but I better not mess with it. ;) */
+.references-small { font-size: 90%;}
+
+/* Highlight clicked reference in blue to help navigation */
+ol.references > li:target {
+ background-color: #DEF;
+}
+sup.reference:target { 
+  background-color: #DEF;
+}
+
+/* Mark redirects in Special:Allpages and Special:Watchlist */
+.allpagesredirect { font-style: italic; }
+.watchlistredir { font-style: italic; }
+
+/* Infobox template style */
+.infobox {
+   border: 1px solid #aaaaaa;
+   background-color: #f9f9f9;
+   color: black;
+   margin-bottom: 0.5em;
+   margin-left: 1em;
+   padding: 0.2em;
+   float: right;
+   clear: right;
+}
+.infobox td,
+.infobox th {
+   vertical-align: top;
+}
+.infobox caption {
+   font-size: larger;
+   margin-left: inherit;
+}
+.infobox.bordered {
+   border-collapse: collapse;
+}
+.infobox.bordered td,
+.infobox.bordered th {
+   border: 1px solid #aaaaaa;
+}
+.infobox.bordered .borderless td,
+.infobox.bordered .borderless th {
+   border: 0;
+}
+
+/* Forum formatting (by -Algorithm & -Splaka) */
+.forumheader {
+     border: 1px solid #aaa;
+     background-color: #f9f9f9; margin-top: 1em; padding: 12px;
+}
+.forumlist td.forum_edited a {
+     color: black; text-decoration: none
+}
+.forumlist td.forum_title a {
+     padding-left: 20px;
+}
+.forumlist td.forum_title a.forum_new {
+     font-weight: bold; background: url(images/4/4e/Forum_new.gif)
+     center left no-repeat; padding-left: 20px;
+}
+.forumlist td.forum_title a.forum_new:visited {
+     font-weight: normal; background: none; padding-left: 20px;
+}
+.forumlist th.forum_title {
+     padding-left: 20px;
+}
+
+/* Recent changes byte indicators */
+.mw-plusminus-pos { color: #006500; }
+.mw-plusminus-neg { color: #8B0000; }
+
+
+
+
+/* default skin for navigation boxes */
+table.navbox {
+    background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    clear: both;
+    font-size: 90%;
+    margin: 1em 0em 0em;
+    padding: 2px;
+    text-align: center;
+    width: 100%;
+}
+
+table.navbox th {
+    background-color: #ccf;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+table.navbox tr:not(:first-child) th {
+    background-color: #ddf;
+}
+
+@media print {
+    .navbox {
+        display: none;
+    }
+}
+
+/* Standard Navigationsleisten, aka box hiding thingy from .de.  Documentation at [[Wikipedia:NavFrame]]. */
+
+div.Boxmerge,
+div.NavFrame {
+        margin: 0px;
+        padding: 4px;
+        border: 1px solid #aaa;
+        text-align: center;
+        border-collapse: collapse;
+        font-size: 95%;
+}
+div.Boxmerge div.NavFrame {
+        border-style: none;
+        border-style: hidden;
+}
+div.NavFrame + div.NavFrame {
+        border-top-style: none;
+        border-top-style: hidden;
+}
+div.NavPic {
+        background-color: #fff;
+        margin: 0px;
+        padding: 2px;
+        float: left;
+}
+div.NavFrame div.NavHead {
+        height: 1.6em;
+        font-weight: bold;
+        background-color: #ccccff;
+        position:relative;
+}
+div.NavFrame p {
+        font-size: 100%;
+}
+div.NavFrame div.NavContent {
+        font-size: 100%;
+}
+div.NavFrame div.NavContent p {
+        font-size: 100%;
+}
+div.NavEnd {
+        margin: 0px;
+        padding: 0px;
+        line-height: 1px;
+        clear: both;
+}
+a.NavToggle {
+        position:absolute;
+        top:0px;
+        right:3px;
+        font-weight:normal;
+        font-size:smaller;
+}
+
+/* </pre> */
