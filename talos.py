@@ -3,10 +3,14 @@ import csv
 import copy
 import os
 import subprocess
+import sys
 
+from dirtyutils import path
 import talos_config
 from firefox import Firefox
 
+sys.path.append(path('talos'))
+import run_tests as StandaloneTalos
 
 class Talos(object):
     def __init__(self, talos_dir='talos', firefox=Firefox(), profile=None):
@@ -34,10 +38,7 @@ class Talos(object):
         config_path = os.path.join(self.talos_dir, 'ts.config')
         self.write_config(config, config_path)
 
-        script_path = os.path.join(self.talos_dir, 'run_tests.py')
-        command = "python " + script_path + " " + config_path
-        proc = subprocess.Popen(command, shell=True)
-        proc.wait()
+        StandaloneTalos.test_file(config_path)
 
         output_path = os.path.join(self.output_dir, 'ts.csv')
         results = self.read_output(output_path)
