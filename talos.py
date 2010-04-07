@@ -9,9 +9,6 @@ from dirtyutils import path
 import talos_config
 from firefox import Firefox
 
-sys.path.append(path('talos'))
-import run_tests as StandaloneTalos
-
 class Talos(object):
     def __init__(self, talos_dir='talos', firefox=Firefox(), profile=None):
         self.talos_dir = talos_dir
@@ -26,6 +23,11 @@ class Talos(object):
            'browser_log' : os.path.join(talos_dir, 'boutput.txt'),
            'init_url' : os.path.join(talos_dir, 'getInfo.html'),
            'csv_dir' : self.output_dir})
+
+        # import the talos script
+        sys.path.append(self.talos_dir)
+        global StandaloneTalos
+        StandaloneTalos = __import__('run_tests')
     
     def run_ts(self, cycles=10):
         ts_config = copy.copy(talos_config.ts_config)
