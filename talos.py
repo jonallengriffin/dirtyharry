@@ -1,42 +1,55 @@
 import yaml
 import csv
+import copy
+import os
+import subprocess
+
+import talos_config
+from firefox import Firefox
+
 
 class Talos(object):
-    def __init__(self, talos_dir='talos', profile=None):
+    def __init__(self, talos_dir='talos', firefox=Firefox(), profile=None):
         self.talos_dir = talos_dir
+        self.firefox = firefox
         self.profile = profile
         # self.profile.setPreference({"browser.dumpenabled": 'true'})
 
-    base_config = {'preferences' : '{}',
-                   'extensions' : '{}',
-                   'csv_dir' : "'output'",
-                   'title' : 'test',
-                   'extra_args' : "''",
-                   'browser_wait' : '5',
-                   'browser_log' : 'browser_output.txt'
-                   'env' : 'NO_EM_RESTART : 1'}
-
-    def write_config(self, config_name='test.config', config={}):
-        f = open(config_name, "w")
-        yaml.dump(dataMap, f)
-        f.close()
-        return
+        self.base_config = copy.copy(talos_config.base_config)
+        self.output_dir = os.path.join(talos_dir, 'output')
+        self.base_config.update({'process' : firefox.process_name,
+           'browser_path' : firefox.executable_path,
+           'browser_log' : os.path.join(talos_dir, 'boutput.txt'),
+           'init_url' : os.path.join(talos_dir, 'getInfo.html'),
+           'csv_dir' : self.output_dir})
     
     def run_ts(self, cycles=10):
-        # create config file
-          # profile_path : self.profile.path
-          # tests : { " - name" : "ts",
-                     # "url" : "startup_test/startup_test.html?begin="}
-          # init_url: getInfo.html
+        ts_config = copy.copy(talos_config.ts_config)
+        ts_config.update({'cycles' : cycles,
+           'profile_path' : self.profile,
+           'url' : os.path.join(self.talos_dir, 'startup_test/startup_test.html?begin=')})
+        config = copy.deepcopy(self.base_config)
+        config['tests'].append(ts_config)
 
-        # open process talos_dir + "run_tests.py --
-        # open output/ts.csv
-        # return [t1, t2, ..., t10]
-        return
- 
-    def run_ts_cold(self):
-        return
+        config_path = os.path.join(self.talos_dir, 'ts.config')
+        self.write_config(config, config_path)
 
-    def run_tp(self):
-        return
-        
+        script_path = os.path.join(self.talos_dir, 'run_tests.py')
+        command = "python " + script_path + " " + config_path
+        proc = subprocess.Popen(command, shell=True)
+        proc.wait()
+
+        output_path = os.path.join(self.output_dir, 'ts.csv')
+        results = self.read_output(output_path)
+        return results
+
+    def write_config(self, config, path):
+        f = open(path, "w")
+        yaml.dump(config, f, canonical=False, default_flow_style=False)
+        f.close()
+
+    def read_output(self, path):
+        f = open(path, "r")
+        reader = csv.DictReader(f, delimiter=',')
+        return map(lambda a : a['val'], reader)
+       

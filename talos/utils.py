@@ -44,6 +44,10 @@ NOISY = 0
 START_TIME = 0
 saved_environment = {}
 
+ROOT = os.path.dirname(os.path.abspath(__file__))
+def path(*a):
+  return os.path.join(ROOT, *a)
+
 def startTimer():
   global START_TIME
   START_TIME = time.time()

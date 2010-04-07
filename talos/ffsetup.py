@@ -54,6 +54,7 @@ import glob
 
 import utils
 from utils import talosError
+from utils import path
 import subprocess
 import ffprocess
 
@@ -155,7 +156,8 @@ def InitializeNewProfile(browser_path, process, browser_wait, extra_args, profil
   """
   PROFILE_REGEX = re.compile('__metrics(.*)__metrics', re.DOTALL|re.MULTILINE)
   command_line = ffprocess.GenerateBrowserCommandLine(browser_path, extra_args, profile_dir, init_url)
-  process = subprocess.Popen('python bcontroller.py --command "%s" --name %s --timeout %d --log %s' % (command_line, process, browser_wait, log), universal_newlines=True, shell=True, bufsize=0, env=os.environ)
+  bcontroller = path('bcontroller.py')
+  process = subprocess.Popen('python %s --command "%s" --name %s --timeout %d --log %s' % (bcontroller, command_line, process, browser_wait, log), universal_newlines=True, shell=True, bufsize=0, env=os.environ)
   res = 0
   total_time = 0
   while total_time < 600: #10 minutes
