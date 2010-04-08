@@ -1,9 +1,8 @@
 import os
 import httplib2
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
-
 def path(*a):
+  ROOT = os.path.dirname(os.path.abspath(__file__))
   return os.path.join(ROOT, *a)
 
 def download_url(url, dest=None):

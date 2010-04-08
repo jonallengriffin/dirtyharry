@@ -107,6 +107,7 @@ def CreateTempProfileDir(source_profile, prefs, extensions):
   # Create a temporary directory for the profile, and copy the
   # source profile to it.
   temp_dir = tempfile.mkdtemp()
+  MakeDirectoryContentsWritable(source_profile)
   profile_dir = os.path.join(temp_dir, 'profile')
   shutil.copytree(source_profile, profile_dir)
   MakeDirectoryContentsWritable(profile_dir)
@@ -160,7 +161,7 @@ def InitializeNewProfile(browser_path, process, browser_wait, extra_args, profil
   process = subprocess.Popen('python %s --command "%s" --name %s --timeout %d --log %s' % (bcontroller, command_line, process, browser_wait, log), universal_newlines=True, shell=True, bufsize=0, env=os.environ)
   res = 0
   total_time = 0
-  while total_time < 600: #10 minutes
+  while total_time < 30: # 30 seconds
     time.sleep(1)
     if process.poll() != None: #browser_controller completed, file now full
       if not os.path.isfile(log):

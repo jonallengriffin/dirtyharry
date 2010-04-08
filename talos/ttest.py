@@ -85,11 +85,14 @@ RESULTS_TP_REGEX = re.compile('__start_tp_report(.*?)__end_tp_report.*?__startTi
                       re.DOTALL | re.MULTILINE)
 RESULTS_REGEX_FAIL = re.compile('__FAIL(.*?)__FAIL', re.DOTALL|re.MULTILINE)
 
-def createProfile(profile_path, browser_config):
+def createProfile(profile_path, browser_config, test_config):
   # Create the new profile
-  temp_dir, profile_dir = ffsetup.CreateTempProfileDir(profile_path,
+  if test_config.has_key('copy_profile') and test_config['copy_profile']:
+    temp_dir, profile_dir = ffsetup.CreateTempProfileDir(profile_path,
                                              browser_config['preferences'],
                                              browser_config['extensions'])
+  else:
+    temp_dir, profile_dir = profile_path, profile_path
   utils.debug("created profile") 
   return profile_dir, temp_dir
 
@@ -170,11 +173,11 @@ def runTest(browser_config, test_config):
   
     # make profile path work cross-platform
     test_config['profile_path'] = os.path.normpath(test_config['profile_path'])
-    profile_dir, temp_dir = createProfile(test_config['profile_path'], browser_config)
+    profile_dir, temp_dir = createProfile(test_config['profile_path'], browser_config, test_config)
     if os.path.isfile(browser_config['browser_log']):
       os.chmod(browser_config['browser_log'], 0777)
       os.remove(browser_config['browser_log'])
-    initializeProfile(profile_dir, browser_config)
+    #initializeProfile(profile_dir, browser_config)
     
     utils.debug("initialized " + browser_config['process'])
     if test_config['shutdown']:

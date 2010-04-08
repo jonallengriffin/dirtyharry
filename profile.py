@@ -1,6 +1,10 @@
 from mozrunner import FirefoxProfile
+from mozrunner import FirefoxRunner
+from firefox import Firefox
+
 import simplejson
 import os.path
+import time
 
 class Profile(FirefoxProfile):
     def set_prefs(self, preferences):
@@ -21,8 +25,17 @@ class Profile(FirefoxProfile):
         for line in pref_lines:
             f.write(line+'\n')
         f.write('#MozRunner Prefs End\n')
-        f.flush() ; f.close()
-    
+        f.flush()
+        f.close()
+
+    def initialize(self, runner=FirefoxRunner()):
+        #runner = FirefoxRunner(binary=app.executable_path, profile=self)
+        runner.profile = self
+        runner.start()
+        time.sleep(4)
+        runner.stop()
+        time.sleep(4)
+        
 
 
 

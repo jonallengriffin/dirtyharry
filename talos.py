@@ -7,7 +7,7 @@ import sys
 
 import talos_config
 from dirtyutils import path
-from firefox import Firefox
+from mozrunner import FirefoxRunner as Firefox
 from profile import Profile
 
 class Talos(object):
@@ -20,8 +20,8 @@ class Talos(object):
 
         self.base_config = copy.copy(talos_config.base_config)
         self.output_dir = os.path.join(talos_dir, 'output')
-        self.base_config.update({'process' : firefox.process_name,
-           'browser_path' : firefox.executable_path,
+        self.base_config.update({'process' : firefox.names[0],
+           'browser_path' : firefox.binary,
            'browser_log' : os.path.join(talos_dir, 'boutput.txt'),
            'init_url' : os.path.join(talos_dir, 'getInfo.html'),
            'csv_dir' : self.output_dir})

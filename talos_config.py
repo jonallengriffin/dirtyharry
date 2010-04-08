@@ -32,7 +32,8 @@ base_config = {
                     "capability.principal.codebase.p1.id" : "http://localhost",
                     "capability.principal.codebase.p1.subjectName" : "",
                     "signed.applets.codebase_principal_support" : True},
-                 'tests' : []
+                 'tests' : [],
+                 'copy_profile' : False
               }
 
 ts_config =  {"name" : "ts",
@@ -43,8 +44,8 @@ ts_config =  {"name" : "ts",
               "win_counters" : [],
               "unix_counters" : [],
               "mac_counters" : [],
-              "shutdown" : True,
-              "timeout" : 10,
+              "shutdown" : False,
+              "timeout" : 10
              }
 
 
