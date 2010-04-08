@@ -265,7 +265,9 @@ def runTest(browser_config, test_config):
           raise talosError("unrecognized output format")
   
       if total_time >= timeout:
-        raise talosError("timeout exceeded")
+        print "timeout exceeded, killing browser"
+        ffprocess.cleanupProcesses(browser_config['process'], browser_config['browser_wait'])
+        #raise talosError("timeout exceeded")
   
       time.sleep(browser_config['browser_wait']) 
       #clean up the process

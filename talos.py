@@ -5,16 +5,18 @@ import os
 import subprocess
 import sys
 
-from dirtyutils import path
 import talos_config
+from dirtyutils import path
 from firefox import Firefox
+from profile import Profile
 
 class Talos(object):
-    def __init__(self, talos_dir='talos', firefox=Firefox(), profile=None):
+    def __init__(self, talos_dir='talos', firefox=Firefox(), profile=Profile()):
         self.talos_dir = talos_dir
         self.firefox = firefox
         self.profile = profile
-        # self.profile.setPreference({"browser.dumpenabled": 'true'})
+        preferences = talos_config.base_config['preferences']
+        self.profile.set_prefs(preferences)
 
         self.base_config = copy.copy(talos_config.base_config)
         self.output_dir = os.path.join(talos_dir, 'output')
@@ -32,7 +34,7 @@ class Talos(object):
     def run_ts(self, cycles=10):
         ts_config = copy.copy(talos_config.ts_config)
         ts_config.update({'cycles' : cycles,
-           'profile_path' : self.profile,
+           'profile_path' : self.profile.profile,
            'url' : os.path.join(self.talos_dir, 'startup_test/startup_test.html?begin=')})
         config = copy.deepcopy(self.base_config)
         config['tests'].append(ts_config)

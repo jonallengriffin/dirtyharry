@@ -24,7 +24,14 @@ base_config = {
                     'dom.disable_window_move_resize' : True,
                     'security.enable_java' : False,
                     'extensions.checkCompatibility' : False,
-                    'extensions.update.notifyUser': False},
+                    'extensions.update.notifyUser': False,
+                    "capability.principal.codebase.p0.granted" : "UniversalPreferencesWrite UniversalXPConnect UniversalPreferencesRead",
+                    "capability.principal.codebase.p0.id" : "file://",
+                    "capability.principal.codebase.p0.subjectName": "",
+                    "capability.principal.codebase.p1.granted" : "UniversalPreferencesWrite UniversalXPConnect UniversalPreferencesRead",
+                    "capability.principal.codebase.p1.id" : "http://localhost",
+                    "capability.principal.codebase.p1.subjectName" : "",
+                    "signed.applets.codebase_principal_support" : True},
                  'tests' : []
               }
 
@@ -36,7 +43,8 @@ ts_config =  {"name" : "ts",
               "win_counters" : [],
               "unix_counters" : [],
               "mac_counters" : [],
-              "shutdown" : True
+              "shutdown" : True,
+              "timeout" : 10,
              }
 
 
