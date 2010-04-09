@@ -54,9 +54,10 @@ import glob
 
 import utils
 from utils import talosError
-from utils import path
 import subprocess
 import ffprocess
+
+from dirtyutils import path
 
 if platform.system() == "Linux":
     from ffprofile_unix import *
@@ -107,7 +108,6 @@ def CreateTempProfileDir(source_profile, prefs, extensions):
   # Create a temporary directory for the profile, and copy the
   # source profile to it.
   temp_dir = tempfile.mkdtemp()
-  MakeDirectoryContentsWritable(source_profile)
   profile_dir = os.path.join(temp_dir, 'profile')
   shutil.copytree(source_profile, profile_dir)
   MakeDirectoryContentsWritable(profile_dir)
@@ -157,11 +157,11 @@ def InitializeNewProfile(browser_path, process, browser_wait, extra_args, profil
   """
   PROFILE_REGEX = re.compile('__metrics(.*)__metrics', re.DOTALL|re.MULTILINE)
   command_line = ffprocess.GenerateBrowserCommandLine(browser_path, extra_args, profile_dir, init_url)
-  bcontroller = path('bcontroller.py')
+  bcontroller = path('talos/bcontroller.py')
   process = subprocess.Popen('python %s --command "%s" --name %s --timeout %d --log %s' % (bcontroller, command_line, process, browser_wait, log), universal_newlines=True, shell=True, bufsize=0, env=os.environ)
   res = 0
   total_time = 0
-  while total_time < 30: # 30 seconds
+  while total_time < 600: #10 minutes
     time.sleep(1)
     if process.poll() != None: #browser_controller completed, file now full
       if not os.path.isfile(log):

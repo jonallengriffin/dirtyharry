@@ -60,7 +60,8 @@ import subprocess
 import utils
 import glob
 from utils import talosError
-from utils import path
+
+from dirtyutils import path
 
 import ffprocess
 import ffsetup
@@ -85,14 +86,11 @@ RESULTS_TP_REGEX = re.compile('__start_tp_report(.*?)__end_tp_report.*?__startTi
                       re.DOTALL | re.MULTILINE)
 RESULTS_REGEX_FAIL = re.compile('__FAIL(.*?)__FAIL', re.DOTALL|re.MULTILINE)
 
-def createProfile(profile_path, browser_config, test_config):
+def createProfile(profile_path, browser_config):
   # Create the new profile
-  if test_config.has_key('copy_profile') and test_config['copy_profile']:
-    temp_dir, profile_dir = ffsetup.CreateTempProfileDir(profile_path,
+  temp_dir, profile_dir = ffsetup.CreateTempProfileDir(profile_path,
                                              browser_config['preferences'],
                                              browser_config['extensions'])
-  else:
-    temp_dir, profile_dir = profile_path, profile_path
   utils.debug("created profile") 
   return profile_dir, temp_dir
 
@@ -173,7 +171,7 @@ def runTest(browser_config, test_config):
   
     # make profile path work cross-platform
     test_config['profile_path'] = os.path.normpath(test_config['profile_path'])
-    profile_dir, temp_dir = createProfile(test_config['profile_path'], browser_config, test_config)
+    profile_dir, temp_dir = createProfile(test_config['profile_path'], browser_config)
     if os.path.isfile(browser_config['browser_log']):
       os.chmod(browser_config['browser_log'], 0777)
       os.remove(browser_config['browser_log'])
@@ -203,7 +201,7 @@ def runTest(browser_config, test_config):
       command_line = ffprocess.GenerateBrowserCommandLine(browser_config['browser_path'], browser_config['extra_args'], profile_dir, url)
   
       utils.debug("command line: " + command_line)
-      bcontroller = path('bcontroller.py')
+      bcontroller = path('talos/bcontroller.py') 
       if 'url_mod' in test_config:
         process = subprocess.Popen('python %s --command "%s" --mod "%s" --name %s --timeout %d --log %s' % (bcontroller, command_line, test_config['url_mod'], browser_config['process'], browser_config['browser_wait'], browser_config['browser_log']), universal_newlines=True, shell=True, bufsize=0, env=os.environ)
       else:
@@ -268,9 +266,7 @@ def runTest(browser_config, test_config):
           raise talosError("unrecognized output format")
   
       if total_time >= timeout:
-        print "timeout exceeded, killing browser"
-        ffprocess.cleanupProcesses(browser_config['process'], browser_config['browser_wait'])
-        #raise talosError("timeout exceeded")
+        raise talosError("timeout exceeded")
   
       time.sleep(browser_config['browser_wait']) 
       #clean up the process
