@@ -10,7 +10,7 @@ resultsWriter = csv.writer(open('results.csv', "w"), delimiter=' ')
 firefox = FirefoxRunner(binary='firefox/firefox')
 
 def run_talos(prof, name):
-  t = Talos(profile=prof, firefox=firefox)
+  t = Talos(profile=prof, firefox=firefox, talos_dir='talos')
   results = t.run_ts(cycles=1)
   resultsWriter.writerow([name] + results)
 

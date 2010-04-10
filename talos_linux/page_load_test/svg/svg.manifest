@@ -1,0 +1,23 @@
+# gearflowers image
+gearflowers.svg
+
+# some generic image compositing tests
+composite-scale.svg
+composite-scale-opacity.svg
+composite-scale-rotate.svg
+composite-scale-rotate-opacity.svg
+
+# Painting multiple complex paths
+% hixie-001.xml
+# Painting multiple complex paths with transparency
+% hixie-002.xml
+# Painting text
+% hixie-003.xml
+# Painting images
+% hixie-004.xml
+# Painting linear gradients
+% hixie-005.xml
+# Painting radial gradients
+% hixie-006.xml
+# World Map
+% hixie-007.xml

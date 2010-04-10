@@ -1,0 +1,21 @@
+/* Score board styles */
+table.sportsbotScoreboard {
+  border: 1px solid #000;
+  margin-bottom: 5px;
+}
+table.sportsbotScoreboard th {
+  background-color: #7fa3b0;
+}
+table.sportsbotScoreboard td {
+  width: 30px;
+  text-align: center;
+}
+table.sportsbotScoreboard td.team {
+  font-size: 90%;
+  width: 150px !important;
+  text-align: left !important;
+}
+
+table.sportsbotStandings {
+
+}

@@ -1,0 +1,241 @@
+/* 
+
+'''Note:''' Anything that is skin-specific (logo related, javascript related) should go into [[MediaWiki:Uncyclopedia.css]]
+
+Tools: [http://uncyclopedia.org/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000 reload cache] | [http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Funcyclopedia.org%2Findex.php%3Ftitle%3DMediaWiki%3ACommon.css%26action%3Draw%26ctype%3Dtext%2Fcss%26smaxage%3D18000&usermedium=all check w3c validation]
+
+ <pre><nowiki>*/
+
+/* Smaller edit links --Algorithm */
+.editsection { display: block; float: right; font-size: small; font-weight: normal }
+
+/* Kills "Forum talk:" links --Algorithm */
+body.ns-110 #ca-talk { display: none !important }
+body.ns-110 #ca-nstab-forum { margin-right: 16px }
+
+/* Puts a redirect indicator before redirects in Special:Allpages -Spl */
+.allpagesredirect { font-style: italic; }
+.allpagesredirect a { background: url(http://uncyclopedia.org/images/5/5c/Allpagesredirect.gif) center left no-repeat; padding-left: 13px; }
+ 
+/* Class to force links to be underlined --Paulgb */
+/* To use: <nowiki><span class="underlinelink">[[link]]</span></nowiki> <!-- Ignore the nowiki --> */
+.underlinelink a{ text-decoration: underline ! important; }
+ 
+/* Class to force links to be not underlined - See .underlinelink for use -Paulgb */
+.nounderlinelink a{ text-decoration: none ! important; }
+
+.hidden-workaround h2 { display: none; }
+ 
+/* For Zork related pages. See [[Template:Zorkheader]]. -Paulgb */
+table.zorkclass td { padding: 3px; }
+.zorkclass { background-color: #000000; color: #FFFFFF; }
+.zorkclass a { color: #FFFFCC; }
+.zorkclass a:visited { color: #FFFFCC; }
+.zorkclass a:hover { color: #FFFFFF; }
+.zorkclass a.new { color: #FF6666; }
+.zorkclass ul { list-style-type: circle; color:#FFFFCC; list-style-image: url(http://uncyclopedia.org/images/d/d4/Zorkbullet.gif); }
+.zorkcmd { color: #FFFFCC; }
+.zorkclue tt:hover { color:#FFFFFF; }
+.zorkclass * a.extiw { color: #CCFFCC !important; }
+.zorkclass * a.external { color: #CCFFCC !important; }
+ 
+/* This makes vfp headers automatically clear the floating image -Paulgb */
+#headclear h1 { clear: both; }
+#headclear h2 { clear: both; }
+#headclear div.editsection { clear: both; position: relative; top: 2em;}
+ 
+/* wikitable/prettytable class for skinning normal tables -Keitei */
+table.wikitable, table.prettytable {
+  margin: 1em 1em 1em 0;
+  background: #f9f9f9;
+  border: 1px #aaaaaa solid;
+  border-collapse: collapse;
+}
+table.wikitable th, table.wikitable td, table.prettytable th, table.prettytable td {
+  border: 1px #aaaaaa solid;
+  padding: 0.2em;
+}
+table.wikitable th, table.prettytable th {
+  background: #f2f2f2;
+  text-align: center;
+}
+table.wikitable caption, table.prettytable caption {
+  margin-left: inherit;
+  margin-right: inherit;
+}
+ 
+/* stealth external links almost like normal links (remove if abused) -Spl */
+#bodyContent .stealthexternallink a { background: none; padding: 0; color: #002bb8; }
+#bodyContent .stealthexternallink a.new { color: #CC2200 !important; }
+#bodyContent .stealthexternallink a:visited { color: #5a3696; }
+#bodyContent .stealthexternallink a:active { color: #faa700; }
+#bodyContent .stealthexternallink a:hover { text-decoration: underline; }
+
+/* stealth new links test per [[Forum:Deliberate Red Links]] -Spl */
+/* note, color should be #ba0000 per /skins3/uncyclopedia/main.css?f=3 but #cc2200 in practice? */
+.new a { color:#cc2200; }
+.new a:visited { color:#a55858; }
+ 
+/* these allow 'hoverable' clickable buttons. All they do is change the ridge from outset to inset -Spl */
+/* Note: hover on non-links doesn't work in IE. Be sure not to define ridge-style in the span */
+/* example: <nowiki><span class="nounderlinelink">[[Main_Page|<span class="buttonlink" style="border-width: 2px; border-color: #999999;background-color:#bbbbbb;padding:1px 5px 1px 5px;color:black;font-size:110%">Main Page</span>]]</span></nowiki> */
+.buttonlink { border-style: outset; }
+.buttonlink:active { border-style: inset; }
+ 
+/* Make sysop nicks bold in recent changes -Spl */
+.special li a[title="User:Algorithm"],
+.special li a[title="User:BobBobBob"],
+.special li a[title="User:Bonalaw"],
+.special li a[title="User:Bradaphraser"],
+.special li a[title="User:Braydie"],
+.special li a[title="User:CRUSHERBOT"],
+.special li a[title="User:Carlb"],
+.special li a[title="User:Chronarion"],
+.special li a[title="User:Codeine"],
+.special li a[title="User:Cs1987"],
+.special li a[title="User:DWIII"],
+.special li a[title="User:Darkdan"],
+.special li a[title="User:David Gerard"],
+.special li a[title="User:Dawg"],
+.special li a[title="User:Elvis"],
+.special li a[title="User:Euniana"],
+.special li a[title="User:EvilZak"],
+.special li a[title="User:Famine"],
+.special li a[title="User:Flammable"],
+.special li a[title="User:Flyingfeline"],
+.special li a[title="User:Gwax"],
+.special li a[title="User:Hindleyite"],
+.special li a[title="User:Hinoa"],
+.special li a[title="User:IMBJR"],
+.special li a[title="User:Insertwackynamehere"],
+.special li a[title="User:Isra1337"],
+.special li a[title="User:Jack Phoenix"],
+.special li a[title="User:KP"],
+.special li a[title="User:Keitei"],
+.special li a[title="User:MadMax"],
+.special li a[title="User:Mhaille"],
+.special li a[title="User:MoneySign"],
+.special li a[title="User:Mordillo"],
+.special li a[title="User:Nytrospawn"],
+.special li a[title="User:Olipro"],
+.special li a[title="User:Ogopogo"],
+.special li a[title="User:PantsMacKenzie"],
+.special li a[title="User:Paulgb"],
+.special li a[title="User:RadicalX"],
+.special li a[title="User:Rangeley"],
+.special li a[title="User:Rcmurphy"],
+.special li a[title="User:Root"],
+.special li a[title="User:Sannse"],
+.special li a[title="User:Savethemooses"],
+.special li a[title="User:Sikon"],
+.special li a[title="User:Sophia"],
+.special li a[title="User:Spang"],
+.special li a[title="User:Spintherism"],
+.special li a[title="User:Stillwaters"],
+.special li a[title="User:Strange but untrue"],
+.special li a[title="User:Thekillerfroggy"],
+.special li a[title="User:TheTris"],
+.special li a[title="User:Todd Lyons"],
+.special li a[title="User:Tompkins"],
+.special li a[title="User:Tom mayfair"],
+.special li a[title="User:Volte"],
+.special li a[title="User:Zim ulator"],
+.special li a[title="User:Zombiebaron"] { font-weight: bold }
+
+/* hide manual edit links class="editlink" in certain implementations class=noeditlink" */
+.noeditlink .editlink { display: none }
+
+/* TOC style to match en.wp */
+#toc h2, .toc h2 { display: inline; border: none; padding: 0; font-size: 100%; font-weight: bold }
+#toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle { text-align: center }
+#toc ul, .toc ul { list-style-type: none; list-style-image: none; margin-left: 0; padding-left: 0; text-align: left }
+#toc ul ul, .toc ul ul { margin: 0 0 0 2em }
+#toc .toctoggle, .toc .toctoggle { font-size: 94% }
+
+/* Hides external link icons from local LATEX images and image description pages linked to via images.wikia.com (CSS3)*/
+a[href *="wikia.com/wikitex"] { background: none !important; padding: 0 !important }
+.fullImageLink img + a, .fullImageLink a:first-child { background: none !important; padding: 0 !important }
+.special li a[href *="wikia.com/uncyclopedia/images"] { background: none !important; padding: 0 !important }
+
+/* allows for expanding hidden sig sections (experimental) -Dawg */
+.sighidden { display: none }
+.sigexpand:hover .sighidden { display: inline !important }
+
+/*Stolen from Wikipedia--keitei */
+/* Coloured watchlist numbers */
+.mw-plusminus-pos {
+  color:#006400;
+}
+
+/* .mw-plusminus-null currently at developer default */
+
+.mw-plusminus-neg {
+  color:#8B0000;
+}
+
+/* Highlight clicked reference in blue to help navigation */
+ol.references > li:target {
+ background-color: #DEF;
+}
+
+sup.reference:target { 
+  background-color: #DEF;
+}
+.limegreen { color: #42e73f; font-weight: bold; }
+
+/* Stops embedded flash hack from displaying during page load */
+#embedFlashDoc { display: none }
+#replacepagetitle { display: none }
+
+/* Censored text style, and clear text on rollover. */
+.censored { color: black; background-color: black; padding: 1px }
+.censored a { color: black; text-decoration: underline; padding: 1px }
+.censored:hover { color: inherit; background-color: inherit !important }
+
+/* temporarily added because uncyc's main.css is outdated */
+.diffchange {
+	color: red;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* "Mark as voted" for VFH -Spang */
+.vfhvoted { display: none }
+.vfhnotvoted { display: none } 
+
+/* 3 column TOC (sorted horizontally; vertical sorting not possible yet) */
+#toc-3-column #toc, #toc-3-column #toc ul { width: 100% !important }
+#toc-3-column #toc ul li { float: left; width: 30%; padding-right: 1%; margin-right: 1%; border-bottom: 1px dotted #ccf; overflow: hidden; text-overflow: ellipsis; -o-text-overflow: ellipsis; white-space: nowrap }
+#toc-3-column #toc ul li a span.tocnumber { color: black; font-weight: bold }
+#toc-3-column #toc ul li a span.tocnumber:after { content: '.' }
+.dpl-3-column td { width: 33%; vertical-align: top }
+
+/* 3-column list */
+.tri-column, .tri-column ul, .tri-column ol { width: 100% !important }
+.tri-column li { float: left; width: 30%; padding-right: 1%; margin-right: 1% }
+
+/**
+ * File histories, stolen from wikipedia because it seems our skin is outdated (again!)
+ */
+table.filehistory {
+	border:1px solid #ccc;
+	border-collapse:collapse;
+}
+
+table.filehistory th,
+table.filehistory td {
+	padding: 0 0.2em 0 0.2em;
+	vertical-align:top;
+	border:1px solid #ccc;
+}
+table.filehistory th {
+	text-align: left;
+}
+table.filehistory td.mw-imagepage-filesize,
+table.filehistory th.mw-imagepage-filesize {
+	white-space:nowrap;
+}
+
+
+
+ /*</nowiki></pre>*/

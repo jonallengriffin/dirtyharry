@@ -1,0 +1,414 @@
+@import "index.php@title=User%253ASportsBot%252Fcommon.css&amp;action=raw&amp;ctype=text%252Fcss.css";
+/*
+==This is for all the skins==
+Remember no preview
+*/
+
+/*
+I copied some things over from [[Mediawiki:monobook.css]] that should be in here
+*/
+div.no-bullet-list ul
+{
+    list-style-type: none;
+    list-style-image: none;
+}
+
+div#siteNotice {text-align:center;
+}
+/*rss icon. see [[template talk:latest news]] */
+
+*.rss {
+color: #FFFFFF; background-color: #FF5500; background-image: none !important; border-color: #FF5500; border-style: outset; text-decoration: none !important; padding-left: 0.2em; padding-right: 0.2em; border-width: 0.15em; font-size: 95%; line-height: 95%; font-family: verdana, sans-serif; font-weight: bold;
+}
+
+/*kill auto-underline in opera (hopefully) make cool hover effect. possibly change to :active for hover effect. [[user:bawolff|Bawolff]] ☺☻[[image:smile.png]] 04:59, 1 January 2006 (UTC). removed no underline, as Amgine didn't like it. [[user:bawolff|Bawolff]] ☺☻[[image:smile.png]] 05:04, 1 January 2006 (UTC) */
+*.rss:hover {border-style:inset;
+}
+
+
+div.no-bullet-list ul
+{
+    list-style-type: none;
+    list-style-image: none;
+}
+
+/*Fix the space between the edit check boxes on editintros. See http://bugzilla.wikimedia.org/show_bug.cgi?id=9252 */
+
+.editOptions p {display:inline;}
+
+
+/*
+/* Interlining in titles. To prevent title overlap. Not sure if should be in monobook.css as this is diff in diff skins. yell at me if this breaks anything in any of the skins. */
+ 
+h1.firstHeading { line-height: 1em; }
+
+/*
+==Backgrounds==
+ */
+div#football-bg-1 { 
+background-image: url('http://upload.wikimedia.org/wikinews/en/5/5a/Badge_right_top.png');
+background-repeat: no-repeat;
+background-position: top left;
+background-attachment: fixed;
+}
+/************************/
+/*
+
+==Dynamic hidden boxes==
+Copied from [[w:Mediawiki:monobook.css]] (not common.css). rev: http://en.wikipedia.org/w/index.php?title=MediaWiki:Monobook.css&oldid=73496939 originally from german 'pedia apearently. note: proably under GFDL.
+Might make work better*/
+ div.Boxmerge,
+ div.NavFrame {
+         margin: 0px;
+         padding: 2px;
+         border: 1px solid #aaaaaa;
+         text-align: center;
+         border-collapse: collapse;
+         font-size: 95%;
+ }
+ div.Boxmerge div.NavFrame {
+         border-style: none;
+         border-style: hidden;
+ }
+ div.NavFrame + div.NavFrame {
+         border-top-style: none;
+         border-top-style: hidden;
+ }
+ div.NavPic {
+         background-color: #ffffff;
+         margin: 0px;
+         padding: 2px;
+         float: left;
+ }
+ div.NavFrame div.NavHead {
+         height: 1.6em;
+         font-weight: bold;
+         font-size: 100%;
+         background-color: #efefef;
+         position:relative;
+ }
+ div.NavFrame p {
+         font-size: 100%;
+ }
+ div.NavFrame div.NavContent {
+         font-size: 100%;
+ }
+ div.NavFrame div.NavContent p {
+         font-size: 100%;
+ }
+ div.NavEnd {
+         margin: 0px;
+         padding: 0px;
+         line-height: 1px;
+         clear: both;
+ }
+ a.NavToggle {
+         position:absolute;
+         top:0px;
+         right:3px;
+         font-weight:normal;
+         font-size:smaller;
+ }
+/*
+===Ugly nav===
+*/
+ div.UglyNav div.Boxmerge,
+ div.UglyNav div.NavFrame {
+         margin: 0px;
+         padding: 2px;
+         border: none;
+         text-align: left;
+         border-collapse: inherit;
+         font-size: 100%;
+ }
+
+
+ div.UglyNav div.NavPic {
+         background-color: transparent;
+         margin: 0px;
+         padding: 2px;
+         float: none;
+ }
+ div.UglyNav div.NavFrame div.NavHead {
+         height: auto;
+         font-weight: normal;
+         font-size: medium;
+         background-color: transparent;
+         position:relative;
+ }
+ div.UglyNav div.NavFrame p {
+         font-size: medium;
+ }
+ div.UglyNav div.NavFrame div.NavContent {
+         font-size: medium;
+ }
+ div.UglyNav div.NavFrame div.NavContent p {
+         font-size: medium;
+ }
+
+/*
+
+==CommonsTicker styles==
+*/
+ 
+  /* 
+===links===
+ */
+  .tickerDiffLink { } /* diff links in ticker */
+  .tickerMiscLink { } /* misc links in ticker */
+ 
+  /* 
+===remove list bullets===
+ */
+  .tickerList ul,    .tickerList ul li    { list-style: none; text-indent:-2em; margin-left:2em;   text-align:left; }
+  .tickerList ul ul, .tickerList ul ul li { list-style: none; text-indent:0;    margin-left:1.5em; text-align:left; }
+
+  /* 
+===per-type styles===
+ */
+
+  .tickerEntry_deleted     {font-weight: bold; }  /* entry for image deletion */
+  .tickerEntry_restored    {font-size: small; } /* entry for restored image */
+  body.page-Wikinews_Admin_action_alerts  .tickerEntry_replaced    {display:none;}  /* entry for image replacement on [[WN:AAA]] */
+  .tickerEntry_replaced    { }  /* entry for image replacement */
+  .tickerEntry_tagged      { }  /* entry for adding/removing problem tags */
+  .tickerEntry_redir       { }  /* entry for critical redirection (fot tag redirects) */
+  .tickerEntry_recat       { }  /* entry for critical re-categorization (for tag categories) */
+  .tickerEntry_notify      { }  /* entry for global notifications */
+  .tickerEntry_changed     { }  /* entry for generic change */
+  body.page-Wikinews_Admin_action_alerts  .tickerEntry_deletedRev    {display:none;}  /* entry for image replacement on [[WN:AAA]] */
+  
+  /*
+=== per-action styles===
+ */
+  .tickerAction_deleted:before     { content:" GONE "; color: #FF0000; font-family:monospace; font-weight:bold; font-size:100%; text-decoration: blink;}  
+  .tickerAction_restored:before { content:" BACK "; color: #00BB00; font-family:monospace; font-weight:bold; font-size:100%; }
+  .tickerAction_deletedRev:before  { content:" -OLD "; color: #DDAAAA; font-family:monospace; font-weight:bold; font-size:100%; }  
+  .tickerAction_replaced:before    { content:" REPL "; color: #CC88FF; font-family:monospace; font-weight:bold; font-size:100%; }  
+  .tickerAction_replacedOwn:before { content:" UPDT "; color: #EEAAFF; font-family:monospace; font-weight:bold; font-size:100%; }  
+  .tickerAction_addedBad:before    { content:" +VfD "; color: #FF8800; font-family:monospace; font-weight:bold; font-size:100%; }  
+  .tickerAction_removedBad:before  { content:" -VfD "; color: #00BB00; font-family:monospace; font-weight:bold; font-size:100%; }  
+  .tickerAction_addedGood:before   { content:" +OK  "; color: #00BB00; font-family:monospace; font-weight:bold; font-size:100%; }  
+  .tickerAction_removedGood:before { content:" -OK  "; color: #FF8800; font-family:monospace; font-weight:bold; font-size:100%; }
+
+  /* 
+===per-status styles===
+ */  
+
+  .tickerStatus_done:before {content:" Fixed "; color: #00AA00; font-family:monospace; font-weight:bold; font-size:90%; text-decoration: none;}
+  .tickerStatus_done {text-decoration:line-through; font-size: small; } 
+  body.page-Wikinews_Admin_action_alerts .tickerStatus_done {display:none; } 
+/*
+==== strike through when entry has been handeled (done)====
+ */
+  /*.tickerStatus_done .tickerAction_deleted:before  { content:" "; text-decoration: none;}*/ 
+  .tickerStatus_done .tickerAction_deleted:before  {text-decoration: none;}
+  /*
+====local reupload====
+ */  
+  .tickerStatus_local {text-decoration:line-through; font-size: small; } 
+  .tickerStatus_local .tickerAction_deleted:before  {content:" "; text-decoration: none;}
+  .tickerStatus_local:before {content:" re-uploaded locally "; color: #00AA00; font-family:monospace; font-weight:bold; font-size:90%; text-decoration: none;}
+  /*
+====in process of fixing====
+ */
+  .tickerStatus_fixing .tickerAction_deleted:before  {content:" "; text-decoration: none;}
+  .tickerStatus_fixing:before {content:"fixing"; color: #FF8800; font-family:monospace; font-weight:bold; font-size:90%;}
+/*
+====Won'tfix====
+*/
+  .tickerStatus_wontfix .tickerAction_deleted:before  {text-decoration: none;}
+  .tickerStatus_wontfix {text-decoration: line-through;}
+  body.page-Wikinews_Admin_action_alerts .tickerStatus_wontfix {display:none;}
+  .tickerStatus_wontfix:before {content:"Will not fix"; color: #CC0000; font-family:monospace; font-weight:bold; font-size:90%;text-decoration:none;}  
+/*
+====similiar====
+*/
+  .tickerStatus_similiar .tickerAction_deleted:before  {text-decoration: none;}
+  .tickerStatus_similiar {text-decoration: line-through;}
+  .tickerStatus_similiar:before {content:"REPL Article;no fix"; color: #FF4400; font-family:monospace; font-weight:bold; font-size:90%;text-decoration:none;}
+/*
+====NA====
+*/
+  .tickerStatus_NA .tickerAction_deleted:before  {text-decoration: none;}
+  .tickerStatus_NA:before {content:"No NEG"; color: #00FF20;} 
+  ul span.tickerStatus_NA + ul span.tickerUsage {display:none;}
+  span.tickerStatus_NA  span.tickerUsage {display:none;}
+  body.page-Wikinews_Admin_action_alerts .tickerStatus_NA {display:none;}
+/*Needed so that both subentrys and non-subentrys both are invisivble */
+/*
+
+=== ticker usage list===
+ */
+  .tickerUsage  { font-size:80%; }  
+
+  /* entry applies to a template used by multiple images */
+  .tickerTemplateEntry    { font-weight: bold; } 
+
+  /* entry applies to sub-entries, i.e. images that use a specific template */
+  .tickerSubEntry         { }                       
+
+  /* minor entry styles */ 
+  .tickerMinorEntry  { color:#666; }     /* minor entry */
+  .tickerMinorEntry a,
+  .tickerMinorEntry a:link,
+  .tickerMinorEntry a:visited { color:#669; }
+  #bodyContent .tickerMinorEntry a.extiw,
+  #bodyContent .tickerMinorEntry a.extiw:link,
+  #bodyContent .tickerMinorEntry a.extiw:visited { color:#669; }
+  body.page-Wikinews_Admin_action_alerts .tickerMinorEntry {display:none;}
+
+/* Standard table formatting */
+/* <pre><nowiki> */
+ 
+/* wikitable/prettytable class for skinning normal tables */
+ 
+table.wikitable,
+table.prettytable {
+  margin: 1em 1em 1em 0;
+  background: #f9f9f9;
+  border: 1px #aaaaaa solid;
+  border-collapse: collapse;
+}
+ 
+table.wikitable th, table.wikitable td,
+table.prettytable th, table.prettytable td {
+  border: 1px #aaaaaa solid;
+  padding: 0.2em;
+}
+ 
+table.wikitable td,
+table.prettytable td {
+  background: #f9f9f9;
+}
+ 
+table.wikitable th,
+table.prettytable th {
+  background: #f2f2f2;
+  text-align: center;
+}
+ 
+table.wikitable caption,
+table.prettytable caption {
+  margin-left: inherit;
+  margin-right: inherit;
+}
+
+ 
+
+/* == Standings table style == */
+.standingstable {
+    border: 1px solid #000000;
+    font-size: 90%;
+}
+
+.standingssection {
+    font-size: 125%;
+}
+
+.standingssubsection {
+    vertical-align: middle;
+    font-size: 110%;
+    background-color: #b4b4b4;
+}
+
+.standingsheader {
+    background-color: #c5c5c5;
+    text-align:center;
+    font-weight: bold;
+}
+
+.standingsrow {
+    background-color: #f7f7f7;
+    text-align:center;
+}
+
+.standingsrow2 {
+    background-color: #e6e6e6;
+    text-align:center;
+}
+
+.standingsrow .team, .standingsrow2 .team {
+    width:200px;
+    text-align:left;
+}
+
+.nounderlines a {
+    text-decoration: none;
+}
+
+/* Article message box template styles */
+table.ambox {
+  width: 80%; 
+  margin: 0 auto; 
+  border-collapse: collapse; 
+  background: #f8fcff; 
+  border: 1px solid #aaa; 
+  border-left: 10px solid #39f;       /* Default "notice" blue */
+}
+table.ambox th, table.ambox td {      /* The message body cell(s) */
+  padding: 0.25em 0.5em;              /* 0.5em left/right */
+}
+table.ambox td.ambox-image {          /* The left image cell */
+  width: 52px; 
+  padding: 2px 0px 2px 0.5em;         /* 0.5em left, 0px right */
+  text-align: center; 
+}
+table.ambox td.ambox-imageright {     /* The right image cell */
+  width: 52px; 
+  padding: 2px 0.5em 2px 0px;         /* 0px left, 0.5em right */
+  text-align: center; 
+}
+table.ambox-notice {
+  border-left: 10px solid #39f;       /* Blue */
+/* border-right: 10px solid #39f; */  /* If you want two blue bars */
+}
+table.ambox-serious {
+  border-left: 10px solid #c00;       /* Red */
+}
+table.ambox-content {
+  border-left: 10px solid #f63;       /* Orange */
+}
+table.ambox-style {
+  border-left: 10px solid #fc3;       /* Yellow */
+}
+table.ambox-merge {
+  border-left: 10px solid #95b;       /* Purple */
+}
+
+/* rounded corners class for block elements */
+.roundedCorners {
+  -moz-border-radius-topleft: 1em;
+  border-radius-topleft: 1em;
+  -moz-border-radius-bottomright: 1em;
+  border-radius-bottomright: 1em;
+  -moz-border-radius-topright: 1em;
+  border-radius-topright: 1em;
+  -moz-border-radius-bottomleft: 1em;
+  border-radius-bottomleft: 1em;
+}
+
+.semiblanking {
+ display: none;
+}
+
+/*See [[MediaWiki:NavigationTabs.js]]. copied from wikibooks*/
+.navtabs .tabs li { list-style:none; }
+ .navtabs .tabs a {
+   text-decoration:none;
+   text-transform:uppercase;
+   outline-width:0px;
+   font-size:x-small;
+   font-weight:bold;
+   color:black;
+ }
+ 
+ .navtabs .tabs .inactive { background:#bbb; padding:1ex; }
+ .navtabs .tabs .selected { background:#999; padding:1.1ex; }
+ .navtabs .tabs .inactive:hover { background:#f75; }
+ .navtabs .contents { padding:1ex; border:3px solid #999; }
+
+/* hide the Comments_talk namespace */
+.ns-102 #ca-talk {display:none;}
+.ns-103 #ca-edit {display:none;}
+.ns-103 #ca-addsection {display:none;}

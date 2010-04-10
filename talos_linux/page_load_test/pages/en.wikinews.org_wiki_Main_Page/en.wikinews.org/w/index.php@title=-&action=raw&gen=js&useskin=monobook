@@ -1,0 +1,337 @@
+/* generated javascript */
+var skin = 'monobook';
+var stylepath = '/skins-1.5';
+
+/* MediaWiki:Common.js */
+/* Any JavaScript here will be loaded for all users on every page load. Some other stuff is located at [[mediawiki:monobook.js]] */
+ /* DO NOT EDIT THIS PAGE UNLESS YOU KNOW WHAT YOU ARE DOING */
+ 
+// Adding functions to import external scripts
+ importedScripts = {}; // object keeping track of included scripts, so a script ain't included twice
+ function importScript( page ) {
+   page = encodeURIComponent(page.replace(/ /g, '_' ));
+   
+   if (importedScripts[page]) return; else importedScripts[page] = true;
+   
+   var scriptElem = document.createElement( 'script' );
+   scriptElem.setAttribute( 'type' , 'text/javascript' );
+   scriptElem.setAttribute( 'src' , wgScript + '?title=' + page + '&action=raw&ctype=text/javascript');
+   document.getElementsByTagName( 'head' )[0].appendChild( scriptElem );
+ }
+ 
+ function importStylesheet( page ) {
+   page = encodeURIComponent(page.replace(/ /g, '_' ));
+   
+   if (importedScripts[page]) return; else importedScripts[page] = true;
+   
+   if (document.createStyleSheet) {
+      document.createStyleSheet(wgScript + '?title=' + page + "&action=raw&ctype=text/css");
+   } else {
+      var styleElem = document.createElement('style');
+      styleElem.setAttribute('type', 'text/css');
+      styleElem.appendChild(document.createTextNode('@import "' + wgScript + '?title=' + page + '&action=raw&ctype=text/css";'));
+      document.getElementsByTagName('head')[0].appendChild(styleElem);
+   }
+ }
+
+
+ // for backwards compatibility
+ var addLoadEvent = addOnloadHook;
+ 
+ // Provides an easy way to disable load dependent features
+ function delLoadEvent(func) {
+   for (var i = 0; i < onloadFuncts.length; i++) {
+     if (onloadFuncts[i] == func)
+       onloadFuncts.splice(i, 1);
+   }
+ }
+ 
+ // hasClass()
+ // Description: Uses regular expressions and caching for better performance.
+ // Maintainers: w:User:Mike Dillon, w:User:R. Koot, w:User:SG
+ 
+ var hasClass = (function () {
+    var reCache = {};
+    return function (element, className) {
+      return (reCache[className] ? reCache[className] : (reCache[className] = new RegExp("(?:\\s|^)" + className + "(?:\\s|$)"))).test(element.className);
+    };
+ })();
+
+ // name of project
+ var wgProject = wgServer.replace("http://", "");
+ 
+ /*
+==RSS Feed insert. Only latest news. Should we add others? ==
+ */
+ 
+ document.write('<link type="application/rss+xml" href="http://feeds.feedburner.com/WikinewsLatestNews" rel="alternate" title="Lastest News (RSS)" \/>')
+ 
+ /*
+==Dynamic Navigation==
+ */
+ // Makes some dynamic nav boxes auto-close. See [[user:Bawolff/onebox-select.js]] & [[Template:Dynamic navigation noncentered]]
+ // *Tested in MSIE 6, Opera 9.01, and firefox (1.5.0.11 and 2.0.0.something(I think its a 2 at the end)
+ // *Adapted from the dynamic nav box script which is from somewhere on wikipedia
+ 
+ // set up the words in your language
+ var NavigationBarHide = '[ - ]';
+ var NavigationBarShow = '[ + ]';
+ var ONCE_NavigationBarHide = '[ ↑ ]';
+ var ONCE_NavigationBarShow = '[ ↓ ]';
+ 
+ // set up max count of Navigation Bars on page, if there are more, all will be hidden
+ // NavigationBarShowDefault = 0; // all bars will be hidden
+ // NavigationBarShowDefault = 1; // on pages with more than 1 bar all bars will be hidden
+ var NavigationBarShowDefault = 1;
+ var ONCE_NavigationBarShowDefault = 1;
+ 
+ // shows and hides content and picture (if available) of navigation bars
+ // Parameters:
+ //     indexNavigationBar: the index of navigation bar to be toggled
+ function ONCE_toggleNavigationBar(ONCE_indexNavigationBar)
+ {
+   var ONCE_NavToggle = document.getElementById("NavToggleOnce" + ONCE_indexNavigationBar);
+   var ONCE_NavFrame = document.getElementById("NavFrameOnce" + ONCE_indexNavigationBar);
+   
+   if (!ONCE_NavFrame || !ONCE_NavToggle) {
+     return false;
+   }
+   
+   // if shown now
+   if (ONCE_NavToggle.firstChild.data == ONCE_NavigationBarHide) {
+     for (var ONCE_NavChild = ONCE_NavFrame.firstChild; ONCE_NavChild != null; ONCE_NavChild = ONCE_NavChild.nextSibling) {
+       if (hasClass(ONCE_NavChild, 'NavPic') || hasClass(ONCE_NavChild, 'NavContent')) {
+         ONCE_NavChild.style.display = 'none';
+       }
+     }
+     ONCE_NavToggle.firstChild.data = ONCE_NavigationBarShow;
+   
+   // if hidden now
+   } else if (ONCE_NavToggle.firstChild.data == ONCE_NavigationBarShow) {
+     //Start hiding all open boxes. things with f is loops to close everything
+     for (f = 1; f < 50; f++)  { //prevent indef loop
+       var ONCE_f_NavToggle = document.getElementById("NavToggleOnce" + f);
+       var ONCE_f_NavFrame = document.getElementById("NavFrameOnce" + f);
+       
+       if (!ONCE_f_NavFrame || !ONCE_f_NavToggle) {
+         break;
+       }
+       for (var ONCE_f_NavChild = ONCE_f_NavFrame.firstChild; ONCE_f_NavChild != null; ONCE_f_NavChild = ONCE_f_NavChild.nextSibling) {
+         if (hasClass(ONCE_f_NavChild, 'NavPic') || hasClass(ONCE_f_NavChild, 'NavContent')) {
+           ONCE_f_NavChild.style.display = 'none';
+         }
+       }
+       ONCE_f_NavToggle.firstChild.data = ONCE_NavigationBarShow; 
+     }
+     
+     // open selected one
+     for (var ONCE_NavChild = ONCE_NavFrame.firstChild; ONCE_NavChild != null; ONCE_NavChild = ONCE_NavChild.nextSibling) {
+       if (hasClass(ONCE_NavChild, 'NavPic') || hasClass(ONCE_NavChild, 'NavContent')) {
+         ONCE_NavChild.style.display = 'block';
+       }
+     }
+     ONCE_NavToggle.firstChild.data = ONCE_NavigationBarHide;
+   }
+ }
+ 
+ // shows and hides content and picture (if available) of navigation bars
+ // Parameters:
+ //     indexNavigationBar: the index of navigation bar to be toggled
+ function toggleNavigationBar(indexNavigationBar)
+ {
+   var NavToggle = document.getElementById("NavToggle" + indexNavigationBar);
+   var NavFrame = document.getElementById("NavFrame" + indexNavigationBar);
+   
+   if (!NavFrame || !NavToggle) {
+     return false;
+   }
+   
+   if (NavToggle.firstChild.data == NavigationBarHide) {
+     // if shown now
+     for (var NavChild = NavFrame.firstChild; NavChild != null; NavChild = NavChild.nextSibling) {
+        if (hasClass(NavChild, 'NavPic') || hasClass(NavChild, 'NavContent')) {
+          NavChild.style.display = 'none';
+        }
+      }
+      NavToggle.firstChild.data = NavigationBarShow;
+   } else if (NavToggle.firstChild.data == NavigationBarShow) {
+     // if hidden now
+     for (var NavChild = NavFrame.firstChild; NavChild != null; NavChild = NavChild.nextSibling) {
+       if (hasClass(NavChild, 'NavPic') || hasClass(NavChild, 'NavContent')) {
+         NavChild.style.display = 'block';
+       }
+     }
+     NavToggle.firstChild.data = NavigationBarHide;
+   }
+ }
+ 
+ // adds show/hide-button to navigation bars
+ function createNavigationBarToggleButton()
+ {
+   var indexNavigationBar = 0, ONCE_indexNavigationBar = 0;
+   var NavFrames = document.getElementsByTagName("div");
+   
+   // iterate over all < div >-elements
+   for (var i=0; NavFrame = NavFrames[i]; i++) {
+     // if found a once navigation bar
+     if (hasClass(NavFrame, 'NavFrame') && hasClass(NavFrame, 'NavOnce')) {
+       ONCE_indexNavigationBar++;
+       var ONCE_NavToggle = document.createElement("a");
+       ONCE_NavToggle.className = 'NavToggle';
+       ONCE_NavToggle.setAttribute('id', 'NavToggleOnce' + ONCE_indexNavigationBar);
+       ONCE_NavToggle.setAttribute('href', 'javascript:ONCE_toggleNavigationBar(' + ONCE_indexNavigationBar + ');');
+       
+       var ONCE_NavToggleText = document.createTextNode(ONCE_NavigationBarHide);
+       ONCE_NavToggle.appendChild(ONCE_NavToggleText);
+       // Find the NavHead and attach the toggle link (Must be this complicated because Moz's firstChild handling is borked)
+       for (var j=0; j < NavFrame.childNodes.length; j++) {
+         if (hasClass(NavFrame.childNodes[j], "NavHead")) {
+           NavFrame.childNodes[j].appendChild(ONCE_NavToggle);
+         }
+       }
+       NavFrame.setAttribute('id', 'NavFrameOnce' + ONCE_indexNavigationBar);
+     } else if (hasClass(NavFrame, "NavFrame")) {
+       // if found a navigation bar
+       indexNavigationBar++;
+       var NavToggle = document.createElement("a");
+       NavToggle.className = 'NavToggle';
+       NavToggle.setAttribute('id', 'NavToggle' + indexNavigationBar);
+       NavToggle.setAttribute('href', 'javascript:toggleNavigationBar(' + indexNavigationBar + ');');
+       
+       var NavToggleText = document.createTextNode(NavigationBarHide);
+       NavToggle.appendChild(NavToggleText);
+       // Find the NavHead and attach the toggle link (Must be this complicated because Moz's firstChild handling is borked)
+       for (var j=0; j < NavFrame.childNodes.length; j++) {
+         if (hasClass(NavFrame.childNodes[j], "NavHead")) {
+           NavFrame.childNodes[j].appendChild(NavToggle);
+         }
+       }
+       NavFrame.setAttribute('id', 'NavFrame' + indexNavigationBar);
+     }
+   }
+   
+   // if more Navigation Bars found than Default: hide all
+   if (NavigationBarShowDefault < indexNavigationBar) {
+     for (var i=1; i<=indexNavigationBar; i++) {
+       toggleNavigationBar(i);
+     }
+   }
+   if (ONCE_NavigationBarShowDefault < ONCE_indexNavigationBar) {
+     for (var i=1; i<=ONCE_indexNavigationBar; i++) {
+        ONCE_toggleNavigationBar(i);
+     }
+   }
+ }
+ 
+ addLoadEvent(createNavigationBarToggleButton);
+ 
+ // END Dynamic Navigation Bars
+ // ============================================================
+ 
+ /*
+== custom edit buttons ==
+ */
+ 
+ if (mwCustomEditButtons) {
+   mwCustomEditButtons[mwCustomEditButtons.length] = {
+     "imageFile": "http://upload.wikimedia.org/wikipedia/commons/7/7f/Button_link_to_Wikipedia.png",
+     "speedTip": "wikipedia link",
+     "tagOpen": "[[w:",
+     "tagClose": "|]]",
+     "sampleText": "article title"
+   };
+   
+   mwCustomEditButtons[mwCustomEditButtons.length] = {
+     "imageFile": "http://upload.wikimedia.org/wikipedia/commons/4/47/Button_redir.png",
+     "speedTip": "Redirect",
+     "tagOpen": "#REDIRECT[[",
+     "tagClose": "]]",
+     "sampleText": "Redirected to"
+   };
+ }
+ 
+ /*
+== Comment tabs ==
+ */
+ importScript("MediaWiki:Comments.js");
+ 
+ /*
+==Stats==
+ */
+ 
+ /** pageview counter ***********************************************************
+  *
+  *  Description: Please talk to de:User:LeonWeber before changing anything or 
+  *               if there are any issues with that.
+  *  Maintainers: [[:de:User:LeonWeber]]?
+  */
+ importScript("MediaWiki:Stats.js");
+  
+ /*
+==CGI:IRC login form==
+ */
+ // See [[mediawiki:Irc.js]]. If this does something stupid, blame [[user:Bawolff]]
+ 
+ //load irc login box if on page
+ addLoadEvent(function () {
+   if (document.getElementById("cgiircbox")) {
+     var url = "http://en.wikinews.org/w/index.php?title=Mediawiki:Irc.js&action=raw&ctype=text/javascript&dontcountme=s";
+     var scriptElem = document.createElement( 'script' );
+     scriptElem.setAttribute( 'src' , url );
+     scriptElem.setAttribute( 'type' , 'text/javascript' );
+     document.getElementsByTagName( 'head' )[0].appendChild( scriptElem );
+   }
+ });
+ 
+ /*
+== Miscellaneous/Other ==
+ */
+ 
+ // install [[User:TheFearow]]'s ticker script
+ importScript("MediaWiki:Ticker.js");
+ importScript("MediaWiki:pagecss.js");
+ 
+ // fix for the football portal
+ if (wgPageName == "Portal:Football") { NavigationBarShowDefault = 50; }
+ 
+
+ var load_extratabs = true;
+
+ // edit tools selectbox (see [[MediaWiki:Edittools]] and [[MediaWiki:Edittools.js]])
+ var load_edittools = true;
+ importScript("MediaWiki:Edittools.js");
+
+/* MediaWiki:Monobook.js (deprecated; migrate to Common.js!) */
+/*
+<source lang="javascript">
+*/
+//'''A fair portion of this is now at [[mediawiki:common.js]]'''
+
+/* tooltips and access keys */
+// Moved into mediawiki ns. for example: [[MediaWiki:Tooltip-ca-move]]/[[mediawiki:accesskey-ca-move]]
+
+
+
+// !!'''Alternate stylesheets'''!! Note, Some are on wikipedia/meta/other lang wikinews. Only user whos 
+//userspace its in and admins can edit stylesheets. Ask [[user:Bawolff]] for info. see also [[wikinews:skins]]
+document.write('<link type="text/css" href="http://en.wikinews.org/w/index.php?title=Wikinews:Skins/Datrio.css&action=raw&ctype=text/css" rel="alternate stylesheet" title="Datrio" media="screen,projection" \/> <link type="text/css" href="/w/index.php?title=User:Stw/monobook.css&action=raw&ctype=text/css" rel="alternate stylesheet" title="stw" media="screen,projection" \/> <link type="text/css" href="http://en.wikipedia.org/w/wiki.phtml?title=User:%C6var_Arnfj%F6r%F0_Bjarmason/monobook.css&action=raw&ctype=text/css" rel="alternate stylesheet" title="Milky" media="screen,projection" \/> <link type="text/css" href="http://en.wikinews.org/w/index.php?title=Wikinews:Skins/Ultrawalffle.css&action=raw&ctype=text/css" rel="alternate stylesheet" title="Ultrawalffle" media="screen,projection" \/><link type="text/css" href="http://en.wikinews.org/w/index.php?title=Wikinews:Skins/Clean_and_Blue.css&action=raw&ctype=text/css" rel="alternate stylesheet" title="Clean and Blue" media="screen,projection" \/> <link type="text/css" href="http://en.wikinews.org/w/index.php?title=User:Bawolff/Sandbox/Datrio%2BMrM.css&action=raw&ctype=text/css" rel="alternate stylesheet" title="Datrio+MrM" media="screen,projection" \/> <link type="text/css" href="http://en.wikinews.org/w/index.php?title=Wikinews:Skins/no-background.css&action=raw&ctype=text/css" rel="alternate stylesheet" title="Plain (white) Background" media="screen,projection" \/> <link type="text/css" href="http://en.wikinews.org/w/index.php?title=Wikinews:Skins/newspaper-background.css&action=raw&ctype=text/css" rel="alternate stylesheet" title="Newspaper background" media="screen,projection" \/><link type="text/css" href="http://en.wikinews.org/w/index.php?title=Wikinews:Skins/Messedrocker.css&action=raw&ctype=text/css" rel="alternate stylesheet" title="Messedrocker" media="screen,projection" \/>');
+
+/* </source>
+
+==BEGIN remove Main Page title==
+<source lang="javascript"> */
+
+var mpTitle = "Main Page";
+var isMainPage = (/(title=|\/wiki\/)([Tt]alk:|)[Mm]ain[ _][Pp]age/.test(document.location));
+var isMainPageFront = (document.title.substr(0, document.title.lastIndexOf(" - ")) == mpTitle);
+var isDiff = (document.location.search && (document.location.search.indexOf("diff=") != -1 || document.location.search.indexOf("oldid=") != -1));
+
+if (isMainPage && isMainPageFront && !isDiff)
+{
+document.write('<style type="text/css">/*<![CDATA[*/ #lastmod, #siteSub, #contentSub, h1.firstHeading { display: none !important; } /*]]>*/</style>');
+}
+
+/*
+END remove Main Page title
+</source>
+*/

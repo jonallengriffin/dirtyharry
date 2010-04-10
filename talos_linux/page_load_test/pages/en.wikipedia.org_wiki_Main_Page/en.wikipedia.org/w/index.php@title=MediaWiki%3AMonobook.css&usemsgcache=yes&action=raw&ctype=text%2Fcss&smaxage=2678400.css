@@ -1,0 +1,245 @@
+/*
+ATTENTION ADMINISTRATORS:
+
+This is the CSS for the Monobook skin only. Any major changes to this page
+or [[MediaWiki:Common.css|Common.css]] should be first proposed on
+the [[Wikipedia:Village pump (technical)|Village pump]].  
+
+Furthermore, changes should probably be made in [[MediaWiki:Common.css]]
+rather than this page.
+
+Testing can be done on your own user Monobook.css. In [[Mozilla]] and
+[[Opera (web browser)|Opera]], you can also test style changes dynamically
+with the [http://www.squarefree.com/bookmarklets/webdevel.html test styles]
+bookmarklet from squarefree.com. It pops up a window for adding style rules,
+and updates the page as you type.)
+
+Always check with the [http://tinyurl.com/2bwlye W3C CSS Validation Service]
+after any changes.
+
+Thank you.
+*/
+
+/* <pre><nowiki> */
+
+/* Don't display some stuff on the main page */
+body.page-Main_Page #deleteconfirm,
+body.page-Main_Page #t-cite,
+body.page-Main_Page #lastmod, 
+body.page-Main_Page #siteSub, 
+body.page-Main_Page h1.firstHeading {
+    display: none !important;
+}
+
+/* Donations link to be uncommented during fund-raising drives  */
+#siteNotice {
+    margin-top:5px;
+    padding-left: 4px;
+    font-style: italic;
+    text-align: center;
+    background: transparent;
+}
+
+/*
+#fundraising {
+    text-align: center;
+    border: 1px solid gray;
+    padding: 5px;
+}
+*/
+
+/* BEGIN LIGHT BLUE SECTION */
+/* Make all non-namespace pages have a light blue content area. This is done by
+   setting the background color for all #content areas to light blue and then
+   overriding it for any #content enclosed in a .ns-0 (main namespace). I then
+   do the same for the "tab" background colors. --Lupo */
+
+#content {
+    background: #F8FCFF; /* a light blue */
+}
+
+#content div.thumb {
+    border-color: #F8FCFF;
+}
+
+.ns-0 * #content {
+    background: white;
+}
+
+#p-cactions li a, #p-cactions li a:hover, #p-cactions li.selected a {
+    background-color: #F8FCFF;
+}
+
+.ns-0 * #p-cactions li a {
+    background-color: #fbfbfb;
+}
+
+.ns-0 * #p-cactions li.selected a, .ns-0 * #p-cactions li a:hover {
+    background-color: white;
+}
+
+.ns-0 * #content div.thumb {
+    border-color: white;
+}
+
+/* END LIGHT BLUE SECTION */
+
+/* block quotations */
+#content blockquote {
+    font-size: 93.75%; /* equivalent of 15px in 16px default */
+    margin: 1em 1.6em; /* same indent as an unordered list */
+}
+#content blockquote p {
+    line-height:inherit;
+}
+
+/* Display "From Wikipedia, the free encyclopedia" */
+#siteSub {
+    display: inline;
+    font-size: 92%;
+    font-weight: normal;
+}
+
+/* Bold 'edit this page' link to encourage newcomers */
+#ca-edit a { font-weight: bold !important; }
+
+@media print {
+    /* Do not print edit link in templates using Template:Ed
+       Do not print certain classes that shouldn't appear on paper */
+    .editlink, .noprint, .metadata, .dablink { display: none }
+    #content { background: #fff; } /* white background on print */
+}
+
+/* Accessibility experiment: make diff changes not just colour-based */ 
+
+.diffchange {
+    font-weight: bold;
+    background-color: inherit;
+}
+
+td.diff-addedline, td.diff-deletedline, td.diff-context {
+    vertical-align: top;
+    font-size: 85%;
+    color: inherit;
+}
+
+#pt-login {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+p.error {
+    font-weight: bold;
+}
+
+/* Class styles */
+
+/* .toccolours added here because version in 
+   monobook/main.css wasn't being used by the print style */
+.toccolours { 
+    border:1px solid #aaa;
+    background-color:#f9f9f9;
+    padding:5px;
+    font-size: 95%;
+}
+
+/* Don't underline links in portlets/specialchars even with pref "Underline links:Always" */
+.portlet a, #editpage-specialchars a  { text-decoration: none }
+.portlet a:hover, #editpage-specialchars a:hover { text-decoration: underline }
+
+/* Makes the background of a framed image white instead of gray. */
+/* Only visible with transparent images. */
+/* See #Framed_image_background_color */
+div.thumb div a img {
+    background-color:#fff;
+}
+
+/* For positioning icons at top-right, used in Templates
+   "Spoken Article" and "Featured Article" */
+div.topicon {
+    position:absolute; 
+    z-index:100; 
+    top:10px;
+    display: block !important;
+}
+
+#coordinates {  
+    position:absolute;
+    z-index:1;
+    border:none;
+    background:none;
+    right:30px;
+    top:3.7em;
+    float:right;
+    margin:0.0em;
+    padding:0.0em;
+    line-height:1.5em;
+    text-align:right;
+    text-indent:0;
+    font-size:85%;
+    text-transform:none;
+    white-space:nowrap;
+}
+
+.portlet li {
+    list-style-image: url("../../upload.wikimedia.org/wikipedia/en/1/18/Monobook-bullet.png");
+}
+
+li.FA {
+    list-style-image: url("../../upload.wikimedia.org/wikipedia/en/d/d4/Monobook-bullet-star.png");
+}
+
+/* Infobox template style */
+.infobox {
+    border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+.infobox.bordered td,
+.infobox.bordered th {
+    border: 1px solid #aaa;
+}
+
+/* Styles for bordered infobox with merged rows */
+.infobox.bordered .mergedtoprow td,
+.infobox.bordered .mergedtoprow th {
+    border-top: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+}
+
+.gallerybox .thumb img {
+    background: #F9F9F9;
+}
+
+.infobox.bordered .mergedrow td,
+.infobox.bordered .mergedrow th {
+    border-right: 1px solid #aaa;
+}
+
+/* Remove white border from thumbnails */
+div.thumb {
+    border: none;
+}
+
+div.tright {
+    border: none;
+    margin: 0.5em 0 0.8em 1.4em;
+}
+
+div.tleft {
+    border: none;
+    margin: 0.5em 1.4em 0.8em 0;
+}
+
+/* Give transparent background to table on confirm deletion page */
+form#deleteconfirm table {
+    background-color:transparent;
+}
+
+/* allow disabling of "external" color on internal links in some situations */
+#bodyContent .plainlinks2 a.external[href^="http://en.wikipedia.org"] {
+	color: #002bb8 !important
+}
+
+/* </nowiki></pre> */
