@@ -1,0 +1,1271 @@
+addon_name ts_average
+"<empty profile>" 490
+"<empty profile>" 488
+NoScript "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 56, in <module>
+    run_talos(prof, name)
+  File ""test.py"", line 26, in run_talos
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+TypeError: reduce() of empty sequence with no initial value
+"
+"Personas Plus" 554
+"Adblock Plus" 513
+"Video DownloadHelper" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+FlashGot 518
+Greasemonkey 526
+Firebug 672
+FoxTab "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Download Statusbar" 505
+DownThemAll! 514
+Cooliris 571
+Stylish 511
+"FastestFox - Browse Faster" 589
+CoolPreviews 812
+FireFTP 508
+ImTranslator 509
+"WOT - Safe Browsing Tool" 523
+"Coral IE Tab" 613
+AniWeather 499
+"Xmarks Bookmark and Password Sync" 582
+"IE Tab" 532
+ReminderFox 520
+"Tab Mix Plus" 589
+"Web Developer" 529
+"1-Click YouTube Video Download" 498
+"Google Shortcuts - All Google Services at a glance" 2828
+"Fast YouTube Download" 493
+"Easy YouTube Video Downloader" 479
+"Yoono - Twitter, Facebook, LinkedIn, MySpace, Flickr, AIM, MSN, GTalk..." 684
+"Fox Splitter (formerly Split Browser)" 525
+ColorfulTabs 501
+"Download Manager Tweak" 481
+"TV-FOX  - Watch TV Online" 510
+"iMacros for Firefox" 526
+Lightning 481
+Flashblock 489
+Flagfox 500
+"Fast Video Download (with SearchMenu)" 552
+"Speed Dial" 494
+ScrapBook 500
+"FoxyProxy Standard" 537
+"Ant.com Video Downloader + Video Player" 506
+FireGestures 502
+"Multirow Bookmarks Toolbar" 495
+"Weave Browser Sync" 551
+"Download Flash and Video" 483
+"VideoSurf Videos at a Glance" 493
+AddThis "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 56, in <module>
+    run_talos(prof, name)
+  File ""test.py"", line 26, in run_talos
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+TypeError: reduce() of empty sequence with no initial value
+"
+"PDF Download" 491
+Forecastfox 507
+"Flash Video Downloader" 504
+BetterPrivacy "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 56, in <module>
+    run_talos(prof, name)
+  File ""test.py"", line 26, in run_talos
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+TypeError: reduce() of empty sequence with no initial value
+"
+"User Agent Switcher" 486
+"YouTube to MP3" 481
+"Fast Dial" 505
+"Glue - Recommendations for Books/Movies/Music " 530
+"SimilarWeb - The Ultimate Discovery Tool" 577
+Screengrab 498
+"Tamper Data" 492
+Feedly 696
+"Download YouTube Videos +" 507
+"SkipScreen -- INCREDIBLE Rapidshare and Megaupload download helper!" 498
+ReloadEvery 495
+Torbutton 545
+"Google Toolbar" 504
+"Facebook Toolbar" 517
+TwitterBar 515
+ColorZilla 494
+WeatherBug 494
+"Memory Fox" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"All-in-One Sidebar" 549
+"RapidShare DownloadHelper" 483
+StumbleUpon 531
+FireShot 502
+FEBE 516
+"IE View" 489
+"Adblock Plus: Element Hiding Helper" 486
+"FoxLingo Translator" 692
+FireDownload 488
+"RSS Ticker" 498
+"Image Zoom" 480
+"IE Tab 2 (FF 3.6+)" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Keep Tube: Download Youtube Videos (HD 1080p & 720p), Dailymotion, Vimeo, Megavideo, Metacafe, Google, Yahoo, Spike, Myspace, Facebook, Veoh, Break, Current, Redtube videos and more!" 492
+SearchPreview 538
+AutoProxy 527
+AutoPager 1039
+"WebMail Notifier" 514
+"Gmail Notifier" 494
+"Integrated Gmail" 505
+"Echofon for Twitter" 524
+"Tree Style Tab" 567
+FoxyTunes 688
+"Read It Later" 548
+"Live HTTP Headers" 485
+"MinimizeToTray Plus" 541
+Picnik 480
+Fire.fm 651
+"Delicious Bookmarks" 581
+"Provider for Google Calendar" 496
+FoxClocks 724
+"Reframe It" 509
+"Autofill Forms" 499
+"LastPass Password Manager" 584
+"Facebook Video" 479
+FireTorrent 482
+"Boost for Facebook" 489
+"Flash Video Resources Downloader" 493
+YSlow 565
+"Amazon Universal Wish List" 489
+"Media Converter" 491
+Fission 498
+Enigmail 483
+"Gmail Manager" 508
+"Better Gmail 2" 489
+MediaPlayerConnectivity "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 56, in <module>
+    run_talos(prof, name)
+  File ""test.py"", line 26, in run_talos
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+TypeError: reduce() of empty sequence with no initial value
+"
+ShowIP 485
+gTranslate 642
+"Java Console 6.0.02" 487
+Glasser 480
+ChatZilla 486
+"Evernote Web Clipper" 506
+BlockSite 485
+"Easy DragToGo" 482
+"FoxyProxy Basic" 520
+"WiseStamp - Email Signature" 490
+Fasterfox "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+CacheViewer 484
+"Window Shopper" 621
+QuickJava 491
+MeasureIt 489
+"BabelFish Instant Translation" 560
+"IDM CC" 494
+"Password Exporter" 487
+"Hide Menubar" 499
+"Text Link" 492
+"Smart Stop/Reload" 487
+Ctrl-Tab 481
+"SwitchProxy Tool" 493
+"Smart Bookmarks Bar" 494
+"Ad blocker" 479
+ThunderBrowse 490
+UnPlug 486
+"FacePAD: Facebook Photo Album Downloader" 487
+"Personal Menu" 527
+SmoothWheel 483
+Fasterfox "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"NetVideoHunter Video Downloader" 482
+"MegaUpload DownloadHelper" 487
+"Html Validator" 531
+"Nightly Tester Tools" 510
+"Firefox Showcase" 496
+StrataBuddy 492
+Flashbug 492
+Ghostery 541
+"Tab Scope" 500
+QuickProxy 492
+"Pixlr Grabber" 480
+"Facebook ChatBar +" 491
+"Google Redesigned" 686
+"Quick TransLation (qtl)" 534
+"eBay Sidebar" 542
+Clipmarks 499
+"New Tab Homepage" 484
+"Embedded Objects" 488
+"Text to Voice" 486
+"JavaScript Debugger" 490
+"Dr.Web anti-virus link checker" 485
+BugMeNot 492
+1-ClickWeather 503
+OptimizeGoogle 487
+"New Tab King" 501
+Phzilla 510
+Zindus 497
+"Personas Rotator" 546
+"SeoQuake SEO extension" 550
+"Torrent Finder Toolbar" 562
+"新同文堂 (New Tong Wen Tang)" 531
+"Session Manager" 513
+"My Facebook" 494
+Linkification 487
+"SQLite Manager" 484
+"TinEye Reverse Image Search" 477
+"Shareaholic - For Google, Facebook, Twitter and more!" 506
+"Toolbar Buttons" 531
+"Modify Headers" 491
+Greasefire 496
+HttpFox 495
+"YouTube Video Downloader" 484
+"flv movies downloader" 487
+"GoogleTube - YouTube Player" 477
+"AFOM - Memory Recovery & Retention For Firefox Only" 492
+"Forecastbar Enhanced" 491
+NoSquint 508
+"Low Quality Flash" 482
+AnyColor "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Contacts Sidebar" 495
+FaceMoods 488
+InvisibleHand 524
+"ProCon Latte" 503
+"Power Twitter" 481
+"Extended Statusbar" 558
+"Tiny Menu" 510
+FirePHP 505
+"Organize Status Bar" 489
+Subtile 488
+"DOM Inspector" 485
+"Targeted Advertising Cookie Opt-Out (TACO)" 499
+"Google Translator for Firefox" 484
+"DownThemAll! AntiContainer" 492
+FxIF 482
+"Tab Progress Bar" 488
+"MR Tech Toolkit" 533
+"Extra Fasterfoxx" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Textarea Cache" 491
+AmazonAssist 537
+"bab.la dictionary toolbar" 505
+"All-Glass for Firefox" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+Firecookie 490
+"Update Notifier" 506
+"Download YouTube As MP4" 485
+"YouTube Cinema" 495
+"Compact Menu 2" 763
+"Web2PDF Converter" 518
+"Add to Search Bar" 486
+"CodeBurner for Firebug" 489
+"Google Contacts" 496
+FootieFox 618
+"SEO Doctor" 490
+"VKontakte.ru / vk.com MP3 Music Downloader" 479
+"Infoaxe: Full Text Web History Search synchronized between Firefox, IE on multiple computers." "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 56, in <module>
+    run_talos(prof, name)
+  File ""test.py"", line 26, in run_talos
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+  File ""test.py"", line 26, in <lambda>
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+ValueError: invalid literal for int() with base 10: ''
+"
+AutoCopy 488
+"Open in IE" 490
+"Add-on Collector" 499
+UnMHT 499
+"Quick Locale Switcher" 518
+googlebar 559
+"WorldIP - flag and datacenter, ping and traceroute" 1018
+"Yahoo! Toolbar" 676
+Answers 491
+"Tweak Network" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"PDFescape Extension" 498
+"Facebook Chat History Manager" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Offer Assistant" 484
+"Mozilla Labs - Prism" 485
+MinimizeToTray 480
+"Tab Sidebar" 484
+"MP4 YouTube Downloader" 474
+Zotero 846
+Omnibar 491
+MediaWrap 483
+"Secure Login" 476
+FoxFilter 501
+"MinimizeToTray revived" 525
+"Pearltrees - the world of your interests" 570
+Sage 474
+"NEW Glasser by SzymekPL" 512
+"Undo Closed Tabs Button" 497
+"Hide Caption Titlebar Plus  (Smart)" 517
+"Alexa Sparky" 524
+QuickDrag 483
+"Open IT Online" 491
+"Menu Editor" 486
+"Minimap Sidebar" 507
+"Mozilla Archive Format (with Faithful Save)" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 56, in <module>
+    run_talos(prof, name)
+  File ""test.py"", line 26, in run_talos
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+TypeError: reduce() of empty sequence with no initial value
+"
+"Morning Coffee" 482
+"ChromaTabs Plus" 489
+Meebo 492
+"Yahoo! Mail Notifier" 544
+wmlbrowser 482
+PrintPDF 489
+"Drupal For Firebug" 489
+"View Source Chart" 489
+Tabberwocky 513
+FoxGame 503
+WikiLook 508
+"VKontakte.ru / vk.com Video Downloader" 483
+"Multiple Tab Handler" 498
+"IE View Lite" 483
+Gspace 508
+"Vacuum Places Improved" 483
+"Firefox PDF Plugin for Mac OS X" 496
+"Pearl Crescent Page Saver Basic" 497
+"WebMail Ad Blocker" 490
+"Tab Preview" 498
+SearchStatus 517
+"Save Images" 485
+"All-in-One Gestures" 502
+"Webmaster SAPE" 504
+"Friendbar - The Twitter and Facebook Toolbar" 589
+FireQuery 504
+"ImageHost Grabber" 489
+"Google chrome extensions manager" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Lazarus: Form Recovery" 521
+"ScrapBook Plus" 504
+"Weather Watcher Live" 625
+QuickRestart 484
+"Online Translator Toolbar" 522
+GMarks 486
+RefControl 488
+"Tab Utilities" 646
+"Default FullZoom Level" 494
+"Blank Canvas Gmail Signatures" 485
+LeechBlock 496
+NicoFox "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"FireFTP button" 527
+Locationbar² 502
+"Yet Another Smooth Scrolling" 488
+gTranslator 505
+"Mozilla Labs - Ubiquity" 526
+"FetchMP3 Video to Audio Converter" 498
+"GBookmarks (Google Bookmarks for Firefox)" 493
+Stealther 484
+"DeeperWeb – Boost and Customize Google Search" 501
+"Gmail Watcher" 503
+"Download status" 495
+"Better YouTube" 487
+"Update Scanner" 502
+HackBar 511
+"Adblock Plus Filter Uploader" 482
+"Screen Capture Elite" 517
+Converter 503
+"Facebook Dislike" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+FaviconizeTab 483
+"ScribeFire Blog Editor" 512
+"Orkut Manager" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+CookieCuller 490
+"Capture Fox" 487
+Click&Clean 562
+JSONView 491
+"Microsoft .NET Framework Assistant" 489
+"Multi Links" 502
+Quicktext 488
+"Better GReader" 487
+CheckPlaces 494
+Sxipper 805
+LightningButton 487
+"Hotmail Watcher" 561
+"Tabs on top" 491
+Fox!Box 484
+"Remove Duplicate Messages (Alternate)" 492
+"Live PageRank" 483
+"Firefox Google Assistant by Surf Canyon" 490
+Brief 511
+"Test Pilot" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 56, in <module>
+    run_talos(prof, name)
+  File ""test.py"", line 26, in run_talos
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+  File ""test.py"", line 26, in <lambda>
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+ValueError: invalid literal for int() with base 10: ''
+"
+"Quick Translator" 584
+"Megaupload SX.3.2" 488
+Pencil 494
+"MinimizeToTray For FF 3.5" 859
+"Add Bookmark Here ²" 480
+Check4Change 489
+QuickPageZoom 483
+"Edit Cookies" 479
+"Grab and Drag" 515
+"NBA Scoreboard 2010" 481
+CustomizeGoogle 495
+"Toggle Web Developer Toolbar" 490
+RightToClick 484
+"Ebook PDF Search Engine and Viewer Toolbar" 487
+CookieSafe 479
+"CSS Usage" 485
+fireradiko "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Dictionary Switcher" 481
+CyberSearch 494
+"Adblock Plus Pop-up Addon" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+Wired-Marker 635
+"Auto Shutdown" 490
+ThunderBirthDay 479
+CompactHeader 492
+LookOut 487
+"Firefinder for Firebug" 492
+"greased lightbox" 498
+"Context Search" 480
+"AdChange For AdblockPlus" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 56, in <module>
+    run_talos(prof, name)
+  File ""test.py"", line 26, in run_talos
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+TypeError: reduce() of empty sequence with no initial value
+"
+"Facebook Filter" 482
+BarTab 486
+"Cache Status" 504
+"Sothink Web Video Downloader for Firefox" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Firefox Throttle" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 242, in install_plugin
+    plugin_path = os.path.join(self.profile, 'extensions', plugin_id)
+  File ""/usr/lib/python2.6/posixpath.py"", line 65, in join
+    if b.startswith('/'):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+"
+"XHTML Mobile Profile" 489
+"View Cookies" 489
+pdfit 494
+"Image Toolbar" 487
+"Meeting scheduler for Gmail" 492
+"external IP" 520
+Fotofox 504
+"OnlyWire - Social Networking Auto-Submitter" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+EPUBReader 494
+"goo Dictionary" 500
+FoxTrick "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Amazon S3 Firefox Organizer(S3Fox)" 497
+"CHM Reader" 487
+"Open Bookmarks in New Tab" 503
+AImusic 489
+"Last Tab Close Button" 493
+"Thunderbird Message Filter Import/Export" 485
+GoogleBlack 494
+"Empty Cache Button" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+InFormEnter 485
+SenSEO 491
+QuickNote 493
+"Element Properties" 483
+FlashCatch 505
+"Total Validator" 489
+Console² 494
+Coupons24.com 520
+"Google Reader Watcher" 508
+Vimperator 1008
+"Gladiatus Tools" 485
+"Save Image in Folder" 507
+"Display Mail User Agent" 484
+"FaceMod - Facebook Dislike Button (The Original)" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Flash Killer" 495
+Interclue 580
+KidZui 525
+"Google Docs Viewer (PDF, PPT, TIFF, DOC, DOCX)" 481
+OpenDownload 489
+"Pray Times!" 498
+"Drag & DropZones" 509
+LinkChecker 479
+"Simple Mail" 493
+Linky 499
+"RDown - Rapidshare Downloader" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+NewTabURL 485
+"Download Sort" 493
+"LinkExtend - Site Ratings" 638
+"Bulk Image Downloader" 499
+NewsFox 528
+"TooManyTabs - Saves Your Memory" 560
+"Addictive Typing Lessons" 486
+"Feed Sidebar" 548
+"YouTube Enabler" 496
+"Stop Autoplay" 489
+"Nuke Anything Enhanced" 481
+"Grocery List Generator" 562
+"samfind Bookmarks Bar" 629
+"Pixel Perfect" 481
+TrackMeNot 519
+"Unhide Passwords" 481
+"Xmarks SearchTabs" 520
+"MegaUpload Time Attack" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Google Calendar Tab" 491
+"My Translator (Google Translate)" 481
+"Aero Fox III" 507
+TabRenamizer 511
+"Dafizilla Table2Clipboard" 497
+PlainOldFavorites 495
+"WebRank Toolbar - Google Pagerank, Alexa, Compete and Quantcast Rank with Pick Me Bookmarking" 524
+"Signature Switch" 480
+rikaichan 497
+"Locale Switcher" 488
+"Flash Game Maximizer" 495
+"Zoom Page" 481
+"Print/Print Preview" 489
+Image-Show-Hide 488
+foxydeal 657
+"Privacy +" 482
+"Add N Edit Cookies" 500
+RetailMeNot 481
+"Aviary Screen Capture & Quick Launch (Talon)" 494
+"Cookie Monster" 491
+"Favicon Picker 3" 481
+"Search Files on Rapidshare Megaupload Mediafire 4shared Easy-Share and Co" 487
+" Amazon Button" 514
+"Full Fullscreen" 485
+"AutoPager Lite" 766
+"Tor-Proxy.NET Toolbar" 503
+"QuickFox Notes" 508
+FlipClock 491
+VMLoad "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Firefox Secrets" 558
+DictionarySearch 496
+"Babylon Dictionary Word Search" 486
+"Broadband Speed Test and Diagnostics" 488
+"Fox Notifier - Follow Facebook, Twitter, Craigslist, Blogger...." 509
+"Screenshot Pimp" 569
+"Configuration Mania" 480
+"LOOP to PDF for Firefox" 531
+Firesizer "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"JavaScript Deobfuscator" 490
+"Yes popups" 483
+"Forex Currency Converter" 480
+"Related How-To Videos Sidebar" 470
+"Domain Details" 494
+"Online Music Player" 571
+RequestPolicy 519
+PopupMaster 499
+"Paste and Go 3" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+Stationery 496
+中止ボタンがしいたけに見えて困る 489
+Firepicker 504
+"SEO Status PageRank/Alexa Toolbar" 509
+"Myibay Auction bid sniper for eBay (""Snipe it"")" 500
+"Browser Backgrounds" 524
+Illimitux "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Remove It Permanently" 503
+Googlepedia 497
+"Glubble for Families" 646
+"Youtube Music Player" 508
+"Copy Plain Text" 503
+"Make Address Bar Font Size Bigger" 488
+"Tab Catalog" 505
+"Certificate Patrol" 501
+"CS Lite" 481
+EditCSS 488
+"Real-Debrid | Plugin" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Russ Key" 497
+"CLIP:  CraigsList Image Prefetcher" 483
+"Netcraft Toolbar" 499
+TrashMail.net 483
+"Font Finder" 482
+autoHideStatusbar "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+mid 478
+"Redirect Remover" 487
+"Multicolumn Bookmarks" 478
+"Ease Link" 496
+"Yahoo! Mail Watcher" 570
+"Nagios Checker" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 723, in _RealGetContents
+    endrec = _EndRecData(fp)
+  File ""/usr/lib/python2.6/zipfile.py"", line 189, in _EndRecData
+    fpin.seek(-sizeEndCentDir, 2)
+IOError: [Errno 22] Invalid argument
+"
+WindowsUpdate "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 723, in _RealGetContents
+    endrec = _EndRecData(fp)
+  File ""/usr/lib/python2.6/zipfile.py"", line 189, in _EndRecData
+    fpin.seek(-sizeEndCentDir, 2)
+IOError: [Errno 22] Invalid argument
+"
+AttachmentExtractor "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 723, in _RealGetContents
+    endrec = _EndRecData(fp)
+  File ""/usr/lib/python2.6/zipfile.py"", line 189, in _EndRecData
+    fpin.seek(-sizeEndCentDir, 2)
+IOError: [Errno 22] Invalid argument
+"
+"Automatic Save Folder" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+FabTabs "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 723, in _RealGetContents
+    endrec = _EndRecData(fp)
+  File ""/usr/lib/python2.6/zipfile.py"", line 189, in _EndRecData
+    fpin.seek(-sizeEndCentDir, 2)
+IOError: [Errno 22] Invalid argument
+"
+Aardvark "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 723, in _RealGetContents
+    endrec = _EndRecData(fp)
+  File ""/usr/lib/python2.6/zipfile.py"", line 189, in _EndRecData
+    fpin.seek(-sizeEndCentDir, 2)
+IOError: [Errno 22] Invalid argument
+"
+"New Tabs at the End" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 723, in _RealGetContents
+    endrec = _EndRecData(fp)
+  File ""/usr/lib/python2.6/zipfile.py"", line 189, in _EndRecData
+    fpin.seek(-sizeEndCentDir, 2)
+IOError: [Errno 22] Invalid argument
+"
+"LIVE TV STREAMING" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+Hyperwords 509
+"Roboform Toolbar for Firefox" 494
+"Pimp My Facebook Skin!" 481
+"PinkTheme Pink Pack " 462
+"CuteMenus - Crystal SVG" 493
+"IE NetRenderer" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+AeroBuddy "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+"Mozilla Labs - Jetpack Prototype" 700
+"Remove Duplicate Messages" 528
+"App Tabs" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+gladder 648
+refspoof 485
+"RUWT? Sports Toolbar" 551
+"QuickFolders (Folder Tabs)" 508
+"Custom Download Manager" 501
+Poster "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 56, in <module>
+    run_talos(prof, name)
+  File ""test.py"", line 21, in run_talos
+    results = t.run_ts(cycles=cycles)
+  File ""/home/heather/dirtyharry/talos.py"", line 45, in run_ts
+    StandaloneTalos.test_file(config_path)
+  File ""talos_linux/run_tests.py"", line 387, in test_file
+    browser_dump, counter_dump, print_format = ttest.runTest(browser_config, test)
+  File ""talos_linux/ttest.py"", line 275, in runTest
+    time.sleep(browser_config['browser_wait'])
+KeyboardInterrupt
+"
+"Java Console 6.0.00" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 55, in <module>
+    prof.initialize(runner=firefox)
+  File ""/home/heather/dirtyharry/profile.py"", line 33, in initialize
+    time.sleep(5)
+KeyboardInterrupt
+"
+"Travian bot Arabic" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 54, in <module>
+    prof = Profile(plugins=[""addon.xpi""])
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 188, in __init__
+    self.install_plugin(plugin)
+  File ""/home/heather/Desktop/mozrunner-2.4.1/mozrunner/__init__.py"", line 206, in install_plugin
+    compressed_file = zipfile.ZipFile(plugin, ""r"")
+  File ""/usr/lib/python2.6/zipfile.py"", line 693, in __init__
+    self._GetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 713, in _GetContents
+    self._RealGetContents()
+  File ""/usr/lib/python2.6/zipfile.py"", line 725, in _RealGetContents
+    raise BadZipfile, ""File is not a zip file""
+BadZipfile: File is not a zip file
+"
+GoogleEnhancer "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 53, in <module>
+    download_url(url, dest=""addon.xpi"")
+  File ""/home/heather/dirtyharry/dirtyutils.py"", line 10, in download_url
+    resp, content = h.request(url, ""GET"")
+  File ""build/bdist.linux-i686/egg/httplib2/__init__.py"", line 1129, in request
+    (response, content) = self._request(conn, authority, uri, request_uri, method, body, headers, redirections, cachekey)
+  File ""build/bdist.linux-i686/egg/httplib2/__init__.py"", line 901, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+  File ""build/bdist.linux-i686/egg/httplib2/__init__.py"", line 862, in _conn_request
+    conn.request(method, request_uri, body, headers)
+  File ""/usr/lib/python2.6/httplib.py"", line 898, in request
+    self._send_request(method, url, body, headers)
+  File ""/usr/lib/python2.6/httplib.py"", line 935, in _send_request
+    self.endheaders()
+  File ""/usr/lib/python2.6/httplib.py"", line 892, in endheaders
+    self._send_output()
+  File ""/usr/lib/python2.6/httplib.py"", line 764, in _send_output
+    self.send(msg)
+  File ""/usr/lib/python2.6/httplib.py"", line 723, in send
+    self.connect()
+  File ""build/bdist.linux-i686/egg/httplib2/__init__.py"", line 774, in connect
+    self.sock =_ssl_wrap_socket(sock, self.key_file, self.cert_file)
+  File ""/usr/lib/python2.6/ssl.py"", line 350, in wrap_socket
+    suppress_ragged_eofs=suppress_ragged_eofs)
+  File ""/usr/lib/python2.6/ssl.py"", line 118, in __init__
+    self.do_handshake()
+  File ""/usr/lib/python2.6/ssl.py"", line 293, in do_handshake
+    self._sslobj.do_handshake()
+KeyboardInterrupt
+"
+"Tab Kit" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 55, in <module>
+    prof.initialize(runner=firefox)
+  File ""/home/heather/dirtyharry/profile.py"", line 35, in initialize
+    time.sleep(5)
+KeyboardInterrupt
+"
+"Lightning Nightly Updater (Unofficial)" "Exception thrown Traceback (most recent call last):
+  File ""test.py"", line 53, in <module>
+    download_url(url, dest=""addon.xpi"")
+  File ""/home/heather/dirtyharry/dirtyutils.py"", line 10, in download_url
+    resp, content = h.request(url, ""GET"")
+  File ""build/bdist.linux-i686/egg/httplib2/__init__.py"", line 1129, in request
+    (response, content) = self._request(conn, authority, uri, request_uri, method, body, headers, redirections, cachekey)
+  File ""build/b

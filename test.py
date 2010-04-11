@@ -12,12 +12,12 @@ resultsWriter = csv.writer(results_file, delimiter=' ')
 raw_file = open('raw_results.csv', "w")
 rawWriter = csv.writer(raw_file, delimiter=' ')
 
-firefox = FirefoxRunner(binary='firefox/firefox.exe')
+firefox = FirefoxRunner(binary='firefox/firefox')
 
-cycles = 5
+cycles = 3
 
 def run_talos(prof, name):
-  t = Talos(profile=prof, firefox=firefox)
+  t = Talos(profile=prof, firefox=firefox, talos_dir='talos_linux')
   results = t.run_ts(cycles=cycles)
 
   rawWriter.writerow([name] + results)
@@ -28,7 +28,7 @@ def run_talos(prof, name):
   results_file.flush()
 
 resultsWriter.writerow(['addon_name', 'ts_average'])
-rawWriter.writerow(['addon_name', 'ts1', 'ts2', 'ts3', 'ts4', 'ts5'])
+rawWriter.writerow(['addon_name', 'ts1', 'ts2', 'ts3'])
 
 # no addons
 prof = Profile()
