@@ -30,9 +30,9 @@ class Profile(FirefoxProfile):
     def initialize(self, runner=FirefoxRunner()):
         runner.profile = self
         runner.start()
-        time.sleep(5)
+        time.sleep(4)
         runner.stop()
-        time.sleep(5)
+        time.sleep(4)
         
 
 
