@@ -36,7 +36,7 @@ class TalosTest(Test):
         if match:
             return match.group(1)
 
-        return 'could not format output'
+        print 'could not format output'
 
     
 
