@@ -12,12 +12,13 @@ def test_firebug_unittest():
     mochitest.run(profile=prof, runner=firefox)
 
 def test_addon_perf():
-    firefox = FirefoxRunner(binary='firefox/firefox') 
+    firefox = FirefoxRunner(binary='firefox/firefox')
+
     profile = Profile(plugins=["addon.xpi"])
     
     ts = Ts()
-    ts.run(profile=profile, runner=firefox)
-
+    result = ts.run(profile=profile, runner=firefox)
+    print result
 
 if __name__ == "__main__":
     test_addon_perf()
