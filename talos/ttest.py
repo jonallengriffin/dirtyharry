@@ -175,7 +175,7 @@ def runTest(browser_config, test_config):
     if os.path.isfile(browser_config['browser_log']):
       os.chmod(browser_config['browser_log'], 0777)
       os.remove(browser_config['browser_log'])
-    #initializeProfile(profile_dir, browser_config)
+    initializeProfile(profile_dir, browser_config)
     
     utils.debug("initialized " + browser_config['process'])
     if test_config['shutdown']:

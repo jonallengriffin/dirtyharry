@@ -1,10 +1,13 @@
-from talos import Talos
-from mozrunner import FirefoxRunner
-from profile import Profile
-
 import csv
-from dirtyutils import download_url
 import traceback
+import time
+import os
+
+from mozrunner import FirefoxRunner
+
+from dirtyutils import download_url
+from talos import Talos
+from profile import Profile
 
 results_file = open('results.csv', "w")
 resultsWriter = csv.writer(results_file, delimiter=' ')
@@ -17,15 +20,23 @@ firefox = FirefoxRunner(binary='firefox/firefox')
 cycles = 3
 
 def run_talos(prof, name):
-  t = Talos(profile=prof, firefox=firefox, talos_dir='talos_linux')
-  results = t.run_ts(cycles=cycles)
+    t = Talos(profile=prof, firefox=firefox, talos_dir='talos_linux')
+    results = []
+  #  print os.path.exists(prof.profile) 
+    for i in range(0, cycles):
+       # print os.path.exists(prof.profile) 
+        time.sleep(20)
+       # print os.path.exists(prof.profile) 
+        results.append(t.run_ts(cycles=1)[0])
+      #  print os.path.exists(prof.profile) 
+      #  print "ran one ts"
+ 
+    rawWriter.writerow([name] + results)
+    raw_file.flush()
 
-  rawWriter.writerow([name] + results)
-  raw_file.flush()
-
-  average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
-  resultsWriter.writerow([name, average])
-  results_file.flush()
+    average = int(round(reduce(lambda x, y: int(x)+int(y), results) / cycles))
+    resultsWriter.writerow([name, average])
+    results_file.flush()
 
 resultsWriter.writerow(['addon_name', 'ts_average'])
 rawWriter.writerow(['addon_name', 'ts1', 'ts2', 'ts3'])
@@ -35,7 +46,7 @@ prof = Profile()
 prof.initialize(runner=firefox)
 run_talos(prof, "<empty profile>")
 
-prof = Profile()
+#prof = Profile()
 prof.initialize(runner=firefox)
 run_talos(prof, "<empty profile>")
 
@@ -45,24 +56,26 @@ reader = csv.reader(f, delimiter=',')
 topaddons = map(lambda a : a, reader)
 
 for i in range(1, 1000):
-  addon_info = topaddons[i]
-  url = addon_info[0]
-  name = addon_info[1]
-  weekly_downloads = addon_info[2]
+    addon_info = topaddons[i]
+    url = addon_info[0]
+    name = addon_info[1]
+    weekly_downloads = addon_info[2]
   
-  for i in range(0, 3):
-    try:
-      download_url(url, dest="addon.xpi")
-      prof = Profile(plugins=["addon.xpi"])
-      prof.initialize(runner=firefox)
-      run_talos(prof, name)
-      downloaded = True
-      break
-    except:
-      continue
+    successful = False
+    for i in range(0, 3):
+        try:
+            download_url(url, dest="addon.xpi")
+            prof = Profile(plugins=["addon.xpi"])
+            prof.initialize(runner=firefox)
+            prof.initialize(runner=firefox)
+            run_talos(prof, name)
+            successful = True
+            break
+        except:
+            continue
 
-  if not downloaded:
-    resultsWriter.writerow([name, 0])
+    if not successful:
+        resultsWriter.writerow([name, 0])
 
     
 
