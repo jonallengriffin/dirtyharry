@@ -49,14 +49,20 @@ for i in range(1, 1000):
   url = addon_info[0]
   name = addon_info[1]
   weekly_downloads = addon_info[2]
-  try:
-    download_url(url, dest="addon.xpi")
-    prof = Profile(plugins=["addon.xpi"])
-    prof.initialize(runner=firefox)
-    run_talos(prof, name)
-  except:
-    resultsWriter.writerow([name, "Exception thrown " + traceback.format_exc()])
-    continue # could be a bad zip file, move along
+  
+  for i in range(0, 3):
+    try:
+      download_url(url, dest="addon.xpi")
+      prof = Profile(plugins=["addon.xpi"])
+      prof.initialize(runner=firefox)
+      run_talos(prof, name)
+      downloaded = True
+      break
+    except:
+      continue
+
+  if not downloaded:
+    resultsWriter.writerow([name, 0])
 
     
 

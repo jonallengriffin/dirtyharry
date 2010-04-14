@@ -31,7 +31,7 @@ class Talos(object):
         global StandaloneTalos
         StandaloneTalos = __import__('run_tests')
     
-    def run_ts(self, cycles=10):
+    def run_ts(self, cycles=1):
         ts_config = copy.copy(talos_config.ts_config)
         ts_config.update({'cycles' : cycles,
            'profile_path' : self.profile.profile,
@@ -46,6 +46,12 @@ class Talos(object):
 
         output_path = os.path.join(self.output_dir, 'ts.csv')
         results = self.read_output(output_path)
+        
+        # clear log file in case the next run fails
+        f = open(output_path, "w")
+        f.write("")
+        f.close()
+
         return results
 
     def write_config(self, config, path):
