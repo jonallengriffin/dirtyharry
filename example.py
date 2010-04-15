@@ -1,3 +1,5 @@
+import time
+
 from mozrunner import FirefoxRunner
 from profile import Profile
 from ts import Ts
@@ -14,11 +16,14 @@ def test_firebug_unittest():
 def test_addon_perf():
     firefox = FirefoxRunner(binary='firefox/firefox')
 
-    profile = Profile(plugins=["addon.xpi"])
-    
+    profile = Profile()
+    profile.initialize(runner=firefox)
+
     ts = Ts()
-    result = ts.run(profile=profile, runner=firefox)
-    print result
+    cycles = 10
+    for i in range(0, cycles):
+         time.sleep(10)
+         print ts.run(profile=profile, runner=firefox)
 
 if __name__ == "__main__":
     test_addon_perf()

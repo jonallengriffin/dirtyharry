@@ -32,7 +32,6 @@ class Profile(FirefoxProfile):
         runner.start()
         time.sleep(4)
         runner.stop()
-        time.sleep(4)
         
 
 

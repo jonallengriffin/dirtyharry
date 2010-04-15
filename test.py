@@ -1,7 +1,9 @@
-from mozrunner import FirefoxRunner
-from profile import Profile
 import time
 import subprocess
+from copy import copy
+
+from mozrunner import FirefoxRunner
+from profile import Profile
 
 class Test(object):
     preferences = {}
@@ -10,9 +12,9 @@ class Test(object):
 
     env = {}
 
-    dry_run_profile = False
-
     args = []
+
+    subprocess_args = {}
 
     def __init__(self):
         return
@@ -20,17 +22,13 @@ class Test(object):
     def run(self, profile=Profile(), runner=FirefoxRunner()):
         self.initialize_profile(profile)
 
-        if(self.dry_run_profile):
-            profile.initialize(runner)
-
         runner.profile = profile
 
-        runner.kp_kwargs = {'stdout' : subprocess.PIPE}
+        proc_args = {'stdout' : subprocess.PIPE}
+        proc_args.update(self.subprocess_args)
+        runner.kp_kwargs = proc_args
 
-        if(self.arg_injections):
-            for i in range(0, len(self.args)):
-                self.args[i] = self.args[i] % eval(self.arg_injections[i])
-        runner.cmdargs = self.args
+        runner.cmdargs = copy(self.args)
 
         runner.start()
 
@@ -40,7 +38,7 @@ class Test(object):
 
     def initialize_profile(self, profile):
         for extension in self.extensions:
-            profile.install_plugin(extension)
+            profile.install_addon(extension)
         profile.set_prefs(self.preferences)
         return
 
