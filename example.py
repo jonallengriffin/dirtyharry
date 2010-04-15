@@ -21,9 +21,12 @@ def test_addon_perf():
 
     ts = Ts()
     cycles = 10
+    results = []
     for i in range(0, cycles):
-         time.sleep(10)
-         print ts.run(profile=profile, runner=firefox)
+         #time.sleep(1)
+         results.append(ts.run(profile=profile, runner=firefox))
+    print results
+         
 
 if __name__ == "__main__":
     test_addon_perf()
