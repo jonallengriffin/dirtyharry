@@ -1,7 +1,7 @@
-from test import Test
+from testrunner import TestRunner
 import re
 
-class TalosTest(Test):
+class TalosTest(TestRunner):
     preferences = { 'browser.EULA.override' : True,
                     'security.fileuri.strict_origin_policy' : False,
                     'browser.shell.checkDefaultBrowser' : False,

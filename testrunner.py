@@ -5,7 +5,7 @@ from copy import copy
 from mozrunner import FirefoxRunner
 from profile import Profile
 
-class Test(object):
+class TestRunner(object):
     preferences = {}
 
     extensions = {}
