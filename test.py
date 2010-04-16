@@ -20,7 +20,7 @@ firefox = FirefoxRunner(binary='firefox/firefox')
 cycles = 3
 
 def run_talos(prof, name):
-    t = Talos(profile=prof, firefox=firefox, talos_dir='talos_linux')
+    t = Talos(profile=prof, firefox=firefox, talos_dir='talos')
     results = []
 
     for i in range(0, cycles):

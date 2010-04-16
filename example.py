@@ -11,11 +11,11 @@ def test_addon_perf():
     profile = Profile()
     profile.initialize(runner=firefox)
 
-    t = Talos(profile=profile, firefox=firefox, talos_dir='talos_linux')
+    t = Talos(profile=profile, firefox=firefox, talos_dir='talos')
     results = []
     cycles = 10
     for i in range(0, cycles):
-        time.sleep(26)
+        #time.sleep(10)
         results.append(t.run_ts(cycles=1)[0])
 
     print results

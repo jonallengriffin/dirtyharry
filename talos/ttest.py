@@ -171,7 +171,7 @@ def runTest(browser_config, test_config):
   
     # make profile path work cross-platform
     test_config['profile_path'] = os.path.normpath(test_config['profile_path'])
-    profile_dir, temp_dir = createProfile(test_config['profile_path'], browser_config)
+    profile_dir, temp_dir = test_config['profile_path'], test_config['profile_path']
     if os.path.isfile(browser_config['browser_log']):
       os.chmod(browser_config['browser_log'], 0777)
       os.remove(browser_config['browser_log'])
