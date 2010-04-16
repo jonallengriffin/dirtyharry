@@ -22,15 +22,11 @@ cycles = 3
 def run_talos(prof, name):
     t = Talos(profile=prof, firefox=firefox, talos_dir='talos_linux')
     results = []
-  #  print os.path.exists(prof.profile) 
+
     for i in range(0, cycles):
-       # print os.path.exists(prof.profile) 
         time.sleep(20)
-       # print os.path.exists(prof.profile) 
         results.append(t.run_ts(cycles=1)[0])
-      #  print os.path.exists(prof.profile) 
-      #  print "ran one ts"
- 
+
     rawWriter.writerow([name] + results)
     raw_file.flush()
 

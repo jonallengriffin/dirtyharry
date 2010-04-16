@@ -175,7 +175,7 @@ def runTest(browser_config, test_config):
     if os.path.isfile(browser_config['browser_log']):
       os.chmod(browser_config['browser_log'], 0777)
       os.remove(browser_config['browser_log'])
-    initializeProfile(profile_dir, browser_config)
+    #initializeProfile(profile_dir, browser_config)
     
     utils.debug("initialized " + browser_config['process'])
     if test_config['shutdown']:
@@ -286,7 +286,7 @@ def runTest(browser_config, test_config):
       all_counter_results.append(counter_results)
      
     ffprocess.cleanupProcesses(browser_config['process'], browser_config['browser_wait']) 
-    cleanupProfile(temp_dir)
+    #cleanupProfile(temp_dir)
 
     utils.restoreEnvironmentVars()
     if test_config['shutdown']:
@@ -312,7 +312,8 @@ def runTest(browser_config, test_config):
               pass
 
       if vars().has_key('temp_dir'):
-        cleanupProfile(temp_dir)
+        pass
+        #cleanupProfile(temp_dir)
     except talosError, te:
       utils.debug("cleanup error: " + te.msg)
     except:
